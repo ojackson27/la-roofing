@@ -9,7 +9,7 @@ const inter = Inter({ subsets: ['latin'], variable: '--font-inter-var' });
 
 export const metadata = {
   title: 'LA Roofing',
-  description: 'Professional roofing services in Los Angeles',
+  description: 'Professional roofing services in Exeter and Devon',
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {

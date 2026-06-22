@@ -31,7 +31,7 @@ export default function ContactSection() {
                   />
                 </svg>
               </span>
-              <span className="text-[var(--color-body-teal)] text-base">(213) 555-0147</span>
+              <span className="text-[var(--color-body-teal)] text-base">07791 052508</span>
             </div>
 
             {/* Mail */}
@@ -80,7 +80,7 @@ export default function ContactSection() {
                 </svg>
               </span>
               <span className="text-[var(--color-body-teal)] text-base">
-                123 Sunset Blvd, Los Angeles, CA 90028
+                2 Kingfisher Court, Pinhoe Trading Est, Pinhoe, Exeter EX4 8JN
               </span>
             </div>
 
