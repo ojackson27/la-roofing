@@ -2,7 +2,7 @@ import React from "react";
 
 export default function ContactSection() {
   return (
-    <section className="w-full py-20">
+    <section className="w-full py-20 bg-white">
       <div className="max-w-[1280px] mx-auto px-4 md:px-16">
         <h2 className="text-3xl font-bold text-[var(--color-trust)] mb-12 text-center">
           Get in Touch
@@ -96,10 +96,11 @@ export default function ContactSection() {
           <div className="w-full md:w-1/2 bg-[var(--color-surface)] p-6 border border-[var(--color-surface-variant)] rounded">
             <form className="flex flex-col gap-4">
               <div className="flex flex-col gap-1">
-                <label className="text-sm font-semibold text-[var(--color-body-teal)]">
+                <label htmlFor="name" className="text-sm font-semibold text-[var(--color-body-teal)]">
                   Name
                 </label>
                 <input
+                  id="name"
                   type="text"
                   placeholder="Your name"
                   className="w-full bg-white border border-[var(--color-surface-variant)] rounded px-3 py-2.5 text-sm focus:outline-none focus:border-[var(--color-accent)] focus:ring-1 focus:ring-[var(--color-accent)]"
@@ -107,10 +108,11 @@ export default function ContactSection() {
               </div>
 
               <div className="flex flex-col gap-1">
-                <label className="text-sm font-semibold text-[var(--color-body-teal)]">
+                <label htmlFor="email" className="text-sm font-semibold text-[var(--color-body-teal)]">
                   Email
                 </label>
                 <input
+                  id="email"
                   type="email"
                   placeholder="Your email"
                   className="w-full bg-white border border-[var(--color-surface-variant)] rounded px-3 py-2.5 text-sm focus:outline-none focus:border-[var(--color-accent)] focus:ring-1 focus:ring-[var(--color-accent)]"
@@ -118,10 +120,11 @@ export default function ContactSection() {
               </div>
 
               <div className="flex flex-col gap-1">
-                <label className="text-sm font-semibold text-[var(--color-body-teal)]">
+                <label htmlFor="phone" className="text-sm font-semibold text-[var(--color-body-teal)]">
                   Phone
                 </label>
                 <input
+                  id="phone"
                   type="tel"
                   placeholder="Your phone number"
                   className="w-full bg-white border border-[var(--color-surface-variant)] rounded px-3 py-2.5 text-sm focus:outline-none focus:border-[var(--color-accent)] focus:ring-1 focus:ring-[var(--color-accent)]"
@@ -129,10 +132,11 @@ export default function ContactSection() {
               </div>
 
               <div className="flex flex-col gap-1">
-                <label className="text-sm font-semibold text-[var(--color-body-teal)]">
+                <label htmlFor="message" className="text-sm font-semibold text-[var(--color-body-teal)]">
                   Message
                 </label>
                 <textarea
+                  id="message"
                   rows={4}
                   placeholder="Tell us about your project..."
                   className="w-full bg-white border border-[var(--color-surface-variant)] rounded px-3 py-2.5 text-sm focus:outline-none focus:border-[var(--color-accent)] focus:ring-1 focus:ring-[var(--color-accent)]"

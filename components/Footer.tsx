@@ -124,6 +124,7 @@ export default function Footer() {
             <input
               type="email"
               placeholder="Your email address"
+              aria-label="Email address for newsletter"
               className="w-full bg-white/10 border border-white/20 rounded px-3 py-2 text-sm text-white placeholder-white/50 focus:outline-none focus:border-[var(--color-accent)] mt-2"
             />
             <button className="w-full border border-[var(--color-accent)] text-[var(--color-accent)] text-sm font-semibold py-2 rounded hover:bg-[var(--color-accent)] hover:text-[var(--color-trust)] transition-colors mt-2">
