@@ -20,10 +20,10 @@ export default function AboutSection() {
             About LA Roofing
           </h2>
           <p className="text-[var(--color-body-teal)] text-lg leading-relaxed max-w-prose">
-            LA Roofing has been serving the Los Angeles community for over a
-            decade, delivering expert roofing solutions for homes and businesses
-            across the region. Our licensed and insured team brings precision to
-            every project, no matter the size.
+            LA Roofing has been serving Exeter and the surrounding areas of
+            Devon for over a decade, delivering expert roofing solutions for
+            homes and businesses across the region. Our licensed and insured
+            team brings precision to every project, no matter the size.
           </p>
           <p className="text-[var(--color-body-teal)] text-lg leading-relaxed max-w-prose">
             We believe in transparent pricing, clear communication, and work
