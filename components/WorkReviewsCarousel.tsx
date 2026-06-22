@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const reviews = [
   {
-    image: "/images/White%20roof.jpg",
+    image: "/images/white-roof.jpg",
     alt: "White roof project",
     stars: "★★★★★",
     quote:
@@ -10,7 +10,7 @@ const reviews = [
     reviewer: "Maria T., Brentwood",
   },
   {
-    image: "/images/unnamed.jpg",
+    image: "/images/photo-1.jpg",
     alt: "Roofing project",
     stars: "★★★★★",
     quote:
@@ -18,7 +18,7 @@ const reviews = [
     reviewer: "James K., Culver City",
   },
   {
-    image: "/images/unnamed%20(1).jpg",
+    image: "/images/photo-2.jpg",
     alt: "Roofing project",
     stars: "★★★★★",
     quote:

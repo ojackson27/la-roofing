@@ -8,7 +8,7 @@ export default function AboutSection() {
           <div className="relative aspect-video md:aspect-square rounded overflow-hidden shadow-sm">
             <Image
               fill
-              src="/images/unnamed%20(2).jpg"
+              src="/images/photo-3.jpg"
               alt="LA Roofing team at work"
               className="object-cover"
               sizes="(max-width: 768px) 100vw, 50vw"

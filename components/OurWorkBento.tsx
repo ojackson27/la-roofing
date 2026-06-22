@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const cards = [
   {
-    src: "/images/unnamed%20(1).png",
+    src: "/images/photo-6.png",
     alt: "Commercial roofing project",
     label: "Commercial Installation",
     className:
@@ -10,7 +10,7 @@ const cards = [
     sizes: "(max-width: 768px) 100vw, 66vw",
   },
   {
-    src: "/images/unnamed%20(2).png",
+    src: "/images/photo-7.png",
     alt: "Residential roof",
     label: "Residential Roofing",
     className:
@@ -18,7 +18,7 @@ const cards = [
     sizes: "(max-width: 768px) 100vw, 33vw",
   },
   {
-    src: "/images/unnamed%20(3).jpg",
+    src: "/images/photo-4.jpg",
     alt: "Roof repair",
     label: "Roof Repair",
     className:

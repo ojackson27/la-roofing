@@ -24,7 +24,7 @@ export default function Navbar() {
             alt="LA Roofing logo"
             width={120}
             height={40}
-            priority
+            loading="eager"
           />
         </a>
 

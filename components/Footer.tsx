@@ -25,13 +25,19 @@ export default function Footer() {
               Quick Links
             </h4>
             <nav>
-              {["Home", "Services", "Our Work", "About Us", "Contact"].map((link) => (
+              {[
+                { label: "Home", href: "/#" },
+                { label: "Services", href: "#services" },
+                { label: "Our Work", href: "#our-work" },
+                { label: "About Us", href: "#about" },
+                { label: "Contact", href: "#contact" },
+              ].map(({ label, href }) => (
                 <a
-                  key={link}
-                  href="#"
+                  key={label}
+                  href={href}
                   className="block text-white/70 text-sm hover:text-[var(--color-accent)] transition-colors py-1"
                 >
-                  {link}
+                  {label}
                 </a>
               ))}
             </nav>
@@ -135,7 +141,7 @@ export default function Footer() {
 
         {/* Bottom bar */}
         <div className="border-t border-white/20 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-white/50 text-sm">
-          <span>© 2024 LA Roofing. All rights reserved.</span>
+          <span>© 2026 LA Roofing. All rights reserved.</span>
           <div className="flex gap-6">
             <a href="#" className="hover:text-white transition-colors">
               Privacy Policy

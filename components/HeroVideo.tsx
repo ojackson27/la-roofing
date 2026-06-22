@@ -24,7 +24,7 @@ export default function HeroVideo() {
 
         <div className="flex flex-wrap gap-4 justify-center">
           <a
-            href="#estimate"
+            href="#contact"
             className="bg-[var(--color-accent)] text-[var(--color-trust)] font-semibold px-8 py-3 rounded hover:opacity-90 transition-opacity"
           >
             Get Estimate
