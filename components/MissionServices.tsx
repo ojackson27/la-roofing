@@ -2,64 +2,64 @@
 
 import { useState } from 'react';
 
-type TabId = 'residential' | 'commercial' | 'repair' | 'maintenance';
+type TabId = 'industrial' | 'roofer' | 'slate' | 'singleply';
 
 const tabs: { id: TabId; label: string }[] = [
-  { id: 'residential', label: 'Residential Roofing' },
-  { id: 'commercial', label: 'Commercial Roofing' },
-  { id: 'repair', label: 'Roof Repair' },
-  { id: 'maintenance', label: 'Maintenance' },
+  { id: 'industrial', label: 'Industrial Roofing & Cladding' },
+  { id: 'roofer', label: 'Roofer' },
+  { id: 'slate', label: 'Slate & Tiling' },
+  { id: 'singleply', label: 'Single Ply Roofing' },
 ];
 
 const tabContent: Record<TabId, { title: string; description: string; bullets: string[] }> = {
-  residential: {
-    title: 'Residential Roofing',
+  industrial: {
+    title: 'Industrial Roofing & Cladding',
     description:
-      'From new installations to full replacements, we handle all types of residential roofing with precision and care.',
+      'Large-scale industrial roofing and cladding installation and replacement, built for durability in Devon’s coastal weather.',
     bullets: [
-      'Asphalt shingles & tiles',
-      'Flat & low-slope roofing',
-      'Leak detection & waterproofing',
-      'Full warranty on all work',
+      'New build and replacement cladding',
+      'High-performance weatherproof systems',
+      'Minimal disruption to operations',
+      'Built to industrial safety standards',
     ],
   },
-  commercial: {
-    title: 'Commercial Roofing',
+  roofer: {
+    title: 'Roofer',
     description:
-      'We provide durable, cost-effective roofing solutions for commercial properties of all sizes.',
+      'Full roofing services for homes and businesses across Exeter, from damaged roof repairs to complete re-roofing.',
     bullets: [
-      'TPO & EPDM membrane systems',
-      'Built-up roofing (BUR)',
-      'Roof coatings & restoration',
-      'Minimal disruption scheduling',
+      'Roof repairs and replacements',
+      'Leak detection and waterproofing',
+      'Free inspection and estimate',
+      'Licensed and insured team',
     ],
   },
-  repair: {
-    title: 'Roof Repair',
+  slate: {
+    title: 'Slate & Tiling',
     description:
-      'Fast, reliable repairs to stop leaks and extend the life of your existing roof.',
+      'Traditional slate and tile roofing combining classic Devon character with modern weatherproofing techniques.',
     bullets: [
-      'Emergency leak repair',
-      'Storm & wind damage',
-      'Flashing & gutter repair',
-      'Free inspection & estimate',
+      'Natural slate and clay/concrete tiles',
+      'Period and heritage property work',
+      'Precision flashing and ridge work',
+      'Full warranty on installation',
     ],
   },
-  maintenance: {
-    title: 'Maintenance Plans',
+  singleply: {
+    title: 'Single Ply Roofing',
     description:
-      'Protect your investment with regular maintenance that catches problems before they become costly.',
+      'Lightweight, flexible, and cost-effective single-ply membrane systems for flat and low-slope roofs.',
     bullets: [
-      'Annual inspection packages',
-      'Debris & moss removal',
-      'Sealant reapplication',
-      'Priority service scheduling',
+      'TPO and EPDM membrane systems',
+      'Ideal for flat and low-slope roofs',
+      'Fast installation, minimal downtime',
+      'Long-term weather resistance',
     ],
   },
 };
 
 export default function MissionServices() {
-  const [activeTab, setActiveTab] = useState<TabId>('residential');
+  const [activeTab, setActiveTab] = useState<TabId>('industrial');
   const content = tabContent[activeTab];
 
   return (
@@ -105,6 +105,15 @@ export default function MissionServices() {
                 <li key={bullet}>{bullet}</li>
               ))}
             </ul>
+            <a
+              href="/services"
+              className="inline-flex items-center gap-1 mt-6 text-sm font-semibold text-[var(--color-primary)] hover:text-[var(--color-accent-ink)] transition-colors"
+            >
+              View all services
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                <path d="M5 12h14M13 6l6 6-6 6" />
+              </svg>
+            </a>
           </div>
         </div>
       </div>

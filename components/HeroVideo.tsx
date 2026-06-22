@@ -20,7 +20,7 @@ export default function HeroVideo() {
         </h1>
 
         <p className="text-lg md:text-xl text-white/90 max-w-2xl">
-          Professional roofing services across Los Angeles. Quality craftsmanship, guaranteed.
+          Professional roofing services across Exeter and Devon. Quality craftsmanship, guaranteed.
         </p>
 
         <div className="flex flex-wrap gap-4 justify-center">
