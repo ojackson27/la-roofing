@@ -29,7 +29,7 @@ export default function Footer() {
                 { label: "Home", href: "/#" },
                 { label: "Services", href: "/services" },
                 { label: "Our Work", href: "#our-work" },
-                { label: "About Us", href: "#about" },
+                { label: "About Us", href: "/about" },
                 { label: "Contact", href: "#contact" },
               ].map(({ label, href }) => (
                 <a
