@@ -1,12 +1,12 @@
 export default function ContactSection() {
   return (
-    <section className="w-full py-20 bg-white">
+    <section id="contact" className="w-full py-24 bg-white">
       <div className="max-w-[1280px] mx-auto px-4 md:px-16">
-        <h2 className="text-3xl font-bold text-[var(--color-trust)] mb-12 text-center">
+        <h2 className="reveal text-3xl font-bold text-[var(--color-trust)] mb-12 text-center">
           Get in Touch
         </h2>
 
-        <div className="flex flex-col md:flex-row gap-12 border border-[var(--color-surface-variant)] bg-white p-8 rounded shadow-sm">
+        <div className="reveal flex flex-col md:flex-row gap-12 border border-[var(--color-surface-variant)] bg-white p-8 rounded">
           {/* Left column */}
           <div className="w-full md:w-1/2 flex flex-col gap-8">
             <h3 className="text-xl font-bold text-[var(--color-trust)]">
@@ -31,7 +31,7 @@ export default function ContactSection() {
                   />
                 </svg>
               </span>
-              <span className="text-[var(--color-body-teal)] text-sm">(213) 555-0147</span>
+              <span className="text-[var(--color-body-teal)] text-base">(213) 555-0147</span>
             </div>
 
             {/* Mail */}
@@ -52,7 +52,7 @@ export default function ContactSection() {
                   />
                 </svg>
               </span>
-              <span className="text-[var(--color-body-teal)] text-sm">info@laroofing.com</span>
+              <span className="text-[var(--color-body-teal)] text-base">info@laroofing.com</span>
             </div>
 
             {/* Location */}
@@ -79,7 +79,7 @@ export default function ContactSection() {
                   />
                 </svg>
               </span>
-              <span className="text-[var(--color-body-teal)] text-sm">
+              <span className="text-[var(--color-body-teal)] text-base">
                 123 Sunset Blvd, Los Angeles, CA 90028
               </span>
             </div>
@@ -101,7 +101,7 @@ export default function ContactSection() {
                   id="name"
                   type="text"
                   placeholder="Your name"
-                  className="w-full bg-white border border-[var(--color-surface-variant)] rounded px-3 py-2.5 text-sm focus:outline-none focus:border-[var(--color-accent)] focus:ring-1 focus:ring-[var(--color-accent)]"
+                  className="w-full bg-white border border-[var(--color-surface-variant)] rounded px-3 py-2.5 text-base focus:outline-none focus:border-[var(--color-primary)] focus:ring-2 focus:ring-[var(--color-primary)]"
                 />
               </div>
 
@@ -113,7 +113,7 @@ export default function ContactSection() {
                   id="email"
                   type="email"
                   placeholder="Your email"
-                  className="w-full bg-white border border-[var(--color-surface-variant)] rounded px-3 py-2.5 text-sm focus:outline-none focus:border-[var(--color-accent)] focus:ring-1 focus:ring-[var(--color-accent)]"
+                  className="w-full bg-white border border-[var(--color-surface-variant)] rounded px-3 py-2.5 text-base focus:outline-none focus:border-[var(--color-primary)] focus:ring-2 focus:ring-[var(--color-primary)]"
                 />
               </div>
 
@@ -125,7 +125,7 @@ export default function ContactSection() {
                   id="phone"
                   type="tel"
                   placeholder="Your phone number"
-                  className="w-full bg-white border border-[var(--color-surface-variant)] rounded px-3 py-2.5 text-sm focus:outline-none focus:border-[var(--color-accent)] focus:ring-1 focus:ring-[var(--color-accent)]"
+                  className="w-full bg-white border border-[var(--color-surface-variant)] rounded px-3 py-2.5 text-base focus:outline-none focus:border-[var(--color-primary)] focus:ring-2 focus:ring-[var(--color-primary)]"
                 />
               </div>
 
@@ -137,7 +137,7 @@ export default function ContactSection() {
                   id="message"
                   rows={4}
                   placeholder="Tell us about your project..."
-                  className="w-full bg-white border border-[var(--color-surface-variant)] rounded px-3 py-2.5 text-sm focus:outline-none focus:border-[var(--color-accent)] focus:ring-1 focus:ring-[var(--color-accent)]"
+                  className="w-full bg-white border border-[var(--color-surface-variant)] rounded px-3 py-2.5 text-base focus:outline-none focus:border-[var(--color-primary)] focus:ring-2 focus:ring-[var(--color-primary)]"
                 />
               </div>
 

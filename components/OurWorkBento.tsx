@@ -6,7 +6,7 @@ const cards = [
     alt: "Commercial roofing project",
     label: "Commercial Installation",
     className:
-      "relative md:col-span-2 md:row-span-2 rounded overflow-hidden shadow-sm border border-[var(--color-surface-variant)]",
+      "relative md:col-span-2 md:row-span-2 rounded overflow-hidden border border-[var(--color-surface-variant)]",
     sizes: "(max-width: 768px) 100vw, 66vw",
   },
   {
@@ -14,7 +14,7 @@ const cards = [
     alt: "Residential roof",
     label: "Residential Roofing",
     className:
-      "relative rounded overflow-hidden shadow-sm border border-[var(--color-surface-variant)]",
+      "relative rounded overflow-hidden border border-[var(--color-surface-variant)]",
     sizes: "(max-width: 768px) 100vw, 33vw",
   },
   {
@@ -22,7 +22,7 @@ const cards = [
     alt: "Roof repair",
     label: "Roof Repair",
     className:
-      "relative rounded overflow-hidden shadow-sm border border-[var(--color-surface-variant)]",
+      "relative rounded overflow-hidden border border-[var(--color-surface-variant)]",
     sizes: "(max-width: 768px) 100vw, 33vw",
   },
 ];
@@ -31,10 +31,10 @@ export default function OurWorkBento() {
   return (
     <section className="w-full py-20 bg-[var(--color-surface)]">
       <div className="max-w-[1280px] mx-auto px-4 md:px-16 flex flex-col gap-8">
-        <h2 className="text-3xl font-bold text-[var(--color-trust)] text-center">
-          Our Work
+        <h2 className="reveal text-3xl font-bold text-[var(--color-trust)] text-center">
+          Recent Projects
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-[250px]">
+        <div className="reveal grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-[250px]">
           {cards.map((card, i) => (
             <div key={i} className={card.className}>
               <Image

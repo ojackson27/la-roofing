@@ -29,7 +29,7 @@ const cards = [
   },
   {
     title: "Locally Owned",
-    body: "A Los Angeles business serving our neighbours with pride since day one.",
+    body: "A Los Angeles business serving our neighbors with pride since day one.",
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="24" height="24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
@@ -43,20 +43,20 @@ export default function WhyChooseUs() {
   return (
     <section className="w-full py-20 bg-white">
       <div className="max-w-[1280px] mx-auto px-4 md:px-16 flex flex-col gap-12">
-        <h2 className="text-3xl font-bold text-[var(--color-trust)] text-center">
+        <h2 className="reveal text-3xl font-bold text-[var(--color-trust)] text-center">
           Why Choose LA Roofing
         </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+        <div className="reveal grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
           {cards.map((card) => (
             <div
               key={card.title}
-              className="flex flex-col items-center gap-4 p-6 border border-[var(--color-surface-variant)] bg-white rounded shadow-sm text-center"
+              className="flex flex-col items-center gap-4 p-6 border border-[var(--color-surface-variant)] bg-white rounded text-center transition-shadow duration-200 hover:shadow-md"
             >
               <div className="w-14 h-14 bg-[var(--color-surface)] rounded flex items-center justify-center text-[var(--color-primary)]">
                 {card.icon}
               </div>
               <p className="text-lg font-bold text-[var(--color-trust)]">{card.title}</p>
-              <p className="text-sm text-[var(--color-body-teal)] leading-relaxed">{card.body}</p>
+              <p className="text-base text-[var(--color-body-teal)] leading-relaxed">{card.body}</p>
             </div>
           ))}
         </div>

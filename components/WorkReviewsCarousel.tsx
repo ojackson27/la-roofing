@@ -29,10 +29,10 @@ const reviews = [
 
 export default function WorkReviewsCarousel() {
   return (
-    <section className="w-full bg-[var(--color-surface)] border-t border-b border-[var(--color-surface-variant)] py-20">
+    <section id="our-work" className="w-full bg-[var(--color-surface)] border-t border-b border-[var(--color-surface-variant)] py-20">
       <div className="max-w-[1280px] mx-auto px-4 md:px-16 flex flex-col gap-8">
-        <h2 className="text-2xl font-bold text-[var(--color-trust)] text-center">
-          Our Work &amp; Reviews
+        <h2 className="reveal text-3xl font-bold text-[var(--color-trust)] text-center">
+          Our Work and Reviews
         </h2>
         <div
           className="flex overflow-x-auto gap-6 pb-4 snap-x snap-mandatory"
@@ -41,7 +41,7 @@ export default function WorkReviewsCarousel() {
           {reviews.map((review, i) => (
             <div
               key={i}
-              className="flex-shrink-0 w-72 md:w-80 bg-white border border-[var(--color-surface-variant)] rounded shadow-sm flex flex-col snap-start overflow-hidden"
+              className="flex-shrink-0 w-72 md:w-80 bg-white border border-[var(--color-surface-variant)] rounded flex flex-col snap-start overflow-hidden"
             >
               <div className="relative aspect-video">
                 <Image
@@ -53,14 +53,14 @@ export default function WorkReviewsCarousel() {
                 />
               </div>
               <div className="p-6 flex flex-col gap-3 flex-grow">
-                <span className="text-[var(--color-accent)] text-lg">
+                <span className="text-[var(--color-primary)] text-lg" aria-label="5 out of 5 stars">
                   {review.stars}
                 </span>
-                <p className="text-[var(--color-body-teal)] leading-relaxed text-sm">
+                <p className="text-[var(--color-body-teal)] leading-relaxed text-base">
                   &ldquo;{review.quote}&rdquo;
                 </p>
                 <p className="text-sm font-semibold text-[var(--color-trust)]">
-                  — {review.reviewer}
+                  {review.reviewer}
                 </p>
               </div>
             </div>

@@ -15,7 +15,7 @@ export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 bg-white border-b border-[var(--color-surface-variant)]">
+    <header className="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-[var(--color-surface-variant)]">
       <div className="max-w-[1280px] mx-auto px-4 md:px-16 flex justify-between items-center h-16">
         {/* Logo */}
         <a href="/">
@@ -34,7 +34,7 @@ export default function Navbar() {
             <a
               key={link.label}
               href={link.href}
-              className="text-sm font-medium text-[var(--color-body-teal)] hover:text-[var(--color-accent)] transition-colors"
+              className="text-sm font-medium text-[var(--color-trust)] hover:text-[var(--color-primary)] transition-colors"
             >
               {link.label}
             </a>
@@ -53,7 +53,7 @@ export default function Navbar() {
 
           {/* Hamburger — mobile only */}
           <button
-            className="md:hidden p-2 text-[var(--color-body-teal)]"
+            className="md:hidden flex items-center justify-center w-11 h-11 -mr-2 text-[var(--color-trust)]"
             onClick={() => setMenuOpen((prev) => !prev)}
             aria-label={menuOpen ? 'Close menu' : 'Open menu'}
             aria-expanded={menuOpen}
@@ -104,7 +104,7 @@ export default function Navbar() {
               key={link.label}
               href={link.href}
               onClick={() => setMenuOpen(false)}
-              className="px-4 py-3 text-sm text-[var(--color-body-teal)] hover:text-[var(--color-accent)] hover:bg-[var(--color-surface)] transition-colors"
+              className="px-4 min-h-[44px] flex items-center text-base text-[var(--color-trust)] hover:text-[var(--color-primary)] hover:bg-[var(--color-surface)] transition-colors"
             >
               {link.label}
             </a>

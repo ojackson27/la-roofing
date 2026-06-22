@@ -63,12 +63,12 @@ export default function MissionServices() {
   const content = tabContent[activeTab];
 
   return (
-    <section className="w-full bg-white border-t border-b border-[var(--color-surface-variant)] py-20">
-      <div className="max-w-[1280px] mx-auto px-4 md:px-16 flex flex-col gap-12">
+    <section id="services" className="w-full bg-white border-t border-b border-[var(--color-surface-variant)] py-24">
+      <div className="max-w-[1280px] mx-auto px-4 md:px-16 flex flex-col gap-14">
         {/* Mission block */}
-        <div className="text-center max-w-3xl mx-auto flex flex-col gap-4">
-          <h2 className="text-2xl font-bold text-[var(--color-trust)]">What We Stand For</h2>
-          <p className="text-[var(--color-body-teal)] text-base leading-relaxed bg-[var(--color-surface)] border border-[var(--color-surface-variant)] p-6 rounded">
+        <div className="reveal text-center max-w-2xl mx-auto flex flex-col gap-4">
+          <h2 className="text-3xl font-bold text-[var(--color-trust)]">What We Stand For</h2>
+          <p className="text-[var(--color-body-teal)] text-lg leading-relaxed">
             At LA Roofing, we are committed to quality, safety, and structural integrity in every
             project we undertake. From residential repairs to large commercial installations, our
             team delivers lasting results backed by years of expertise and a dedication to our
@@ -77,17 +77,18 @@ export default function MissionServices() {
         </div>
 
         {/* Services tabs */}
-        <div>
+        <div className="reveal">
           {/* Tab bar */}
-          <div className="flex flex-wrap gap-6 bg-[var(--color-surface)] border border-[var(--color-surface-variant)] border-b-0 p-4 rounded-t">
+          <div className="flex flex-wrap gap-x-6 gap-y-2 bg-[var(--color-surface)] border border-[var(--color-surface-variant)] border-b-0 p-4 rounded-t">
             {tabs.map((tab) => (
               <button
                 key={tab.id}
                 onClick={() => setActiveTab(tab.id)}
-                className={`pb-2 text-sm font-semibold border-b-2 transition-colors ${
+                aria-pressed={activeTab === tab.id}
+                className={`pb-2 min-h-[44px] text-sm font-semibold border-b-2 transition-colors ${
                   activeTab === tab.id
-                    ? 'border-[var(--color-accent)] text-[var(--color-accent)]'
-                    : 'border-transparent text-[var(--color-body-teal)] hover:text-[var(--color-accent)]'
+                    ? 'border-[var(--color-primary)] text-[var(--color-primary)]'
+                    : 'border-transparent text-[var(--color-body-teal)] hover:text-[var(--color-primary)]'
                 }`}
               >
                 {tab.label}
@@ -98,8 +99,8 @@ export default function MissionServices() {
           {/* Tab content panel */}
           <div className="bg-white min-h-[200px] border border-[var(--color-surface-variant)] p-8 rounded-b">
             <h3 className="text-xl font-bold text-[var(--color-trust)] mb-3">{content.title}</h3>
-            <p className="text-[var(--color-body-teal)] mb-4">{content.description}</p>
-            <ul className="list-disc list-inside space-y-1 text-sm text-[var(--color-body-teal)]">
+            <p className="text-[var(--color-body-teal)] text-base leading-relaxed mb-4">{content.description}</p>
+            <ul className="list-disc list-inside space-y-1.5 text-base text-[var(--color-body-teal)]">
               {content.bullets.map((bullet) => (
                 <li key={bullet}>{bullet}</li>
               ))}
