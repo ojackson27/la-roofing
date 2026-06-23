@@ -2,13 +2,13 @@ import Image from "next/image";
 
 export default function Footer() {
   return (
-    <footer className="bg-[var(--color-primary)] text-white py-16">
+    <footer className="bg-[var(--color-primary)] text-white py-10">
       <div className="max-w-[1280px] mx-auto px-4 md:px-16">
         {/* Logo flanked by quick links and contact info */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 items-start border-b border-white/15 pb-10 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-start border-b border-white/15 pb-6 mb-6">
           {/* Quick Links */}
           <div className="text-center md:text-left order-2 md:order-1">
-            <h4 className="text-sm font-bold uppercase tracking-wider mb-4">
+            <h4 className="text-sm font-bold uppercase tracking-wider mb-2">
               Quick Links
             </h4>
             <nav className="flex flex-col items-center md:items-start">
@@ -22,7 +22,7 @@ export default function Footer() {
                 <a
                   key={label}
                   href={href}
-                  className="inline-block text-white/80 text-sm hover:text-[var(--color-accent)] transition-colors py-1"
+                  className="inline-block text-white/80 text-sm hover:text-[var(--color-accent)] transition-colors py-0.5"
                 >
                   {label}
                 </a>
@@ -37,20 +37,20 @@ export default function Footer() {
               width={300}
               height={163}
               alt="LA Roofing (Exeter) Ltd logo"
-              className="w-[220px] sm:w-[260px] md:w-[280px] h-auto object-contain"
+              className="w-[160px] sm:w-[190px] md:w-[200px] h-auto object-contain"
               priority={false}
             />
-            <p className="text-white/80 text-sm md:text-base mt-4 max-w-xs leading-relaxed">
+            <p className="text-white/80 text-sm mt-2 max-w-xs leading-relaxed">
               Exeter&apos;s trusted roofing specialists. Quality work, guaranteed results.
             </p>
           </div>
 
           {/* Contact */}
           <div className="text-center md:text-left order-3">
-            <h4 className="text-sm font-bold uppercase tracking-wider mb-4">
+            <h4 className="text-sm font-bold uppercase tracking-wider mb-2">
               Contact Us
             </h4>
-            <div className="flex flex-col gap-3 items-center md:items-start">
+            <div className="flex flex-col gap-2 items-center md:items-start">
               {/* Phone */}
               <div className="flex items-start gap-2 max-w-xs md:max-w-none">
                 <svg
@@ -123,14 +123,14 @@ export default function Footer() {
         </div>
 
         {/* Newsletter */}
-        <div className="flex flex-col items-center text-center max-w-md mx-auto mb-12">
-          <h4 className="text-sm font-bold uppercase tracking-wider mb-4">
+        <div className="flex flex-col items-center text-center max-w-md mx-auto mb-6">
+          <h4 className="text-sm font-bold uppercase tracking-wider mb-2">
             Stay Updated
           </h4>
           <p className="text-white/80 text-sm">
             Subscribe for roofing tips and seasonal maintenance reminders.
           </p>
-          <div className="flex flex-col sm:flex-row gap-2 w-full mt-3">
+          <div className="flex flex-col sm:flex-row gap-2 w-full mt-2">
             <input
               type="email"
               placeholder="Your email address"
@@ -144,7 +144,7 @@ export default function Footer() {
         </div>
 
         {/* Bottom bar */}
-        <div className="border-t border-white/20 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-white/70 text-sm">
+        <div className="border-t border-white/20 pt-5 flex flex-col md:flex-row justify-between items-center gap-4 text-white/70 text-sm">
           <span>© 2026 LA Roofing. All rights reserved.</span>
           <div className="flex gap-6">
             <a href="#" className="hover:text-white transition-colors">
