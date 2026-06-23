@@ -3,16 +3,13 @@
 import { useEffect, useRef } from "react";
 import Image from "next/image";
 
-const SCALE = 1.12; // constant overscan buffer so the parallax drift never reveals an edge
-const MAX_DRIFT = 30; // px, how far the image drifts as the section scrolls through the viewport
-
 function clamp(min: number, max: number, value: number) {
   return Math.min(max, Math.max(min, value));
 }
 
 export default function ServicesHero() {
   const sectionRef = useRef<HTMLElement>(null);
-  const imageRef = useRef<HTMLDivElement>(null);
+  const imageRef = useRef<HTMLImageElement>(null);
 
   useEffect(() => {
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
@@ -32,8 +29,10 @@ export default function ServicesHero() {
         1,
         (window.innerHeight - rect.top) / (window.innerHeight + rect.height)
       );
-      const translateY = (progress - 0.5) * 2 * MAX_DRIFT;
-      image.style.transform = `scale(${SCALE}) translateY(${translateY}px)`;
+      const positionY = 20 + progress * 60; // pans the visible crop window from 20% to 80%
+      const scale = 1 + progress * 0.06; // gentle zoom-in to match
+      image.style.objectPosition = `center ${positionY}%`;
+      image.style.transform = `scale(${scale})`;
     };
 
     const onScroll = () => {
@@ -57,16 +56,16 @@ export default function ServicesHero() {
       ref={sectionRef}
       className="relative w-full min-h-[480px] md:min-h-[560px] flex items-center justify-center overflow-hidden"
     >
-      <div ref={imageRef} className="absolute inset-0 will-change-transform" style={{ transform: `scale(${SCALE})` }}>
-        <Image
-          src="/images/services-hero.jpg"
-          alt="Tudor-style house with a newly completed tiled roof"
-          fill
-          priority
-          className="object-cover"
-          sizes="100vw"
-        />
-      </div>
+      <Image
+        ref={imageRef}
+        src="/images/services-hero.jpg"
+        alt="Tudor-style house with a newly completed tiled roof"
+        fill
+        priority
+        className="object-cover will-change-transform"
+        style={{ objectPosition: "center 20%" }}
+        sizes="100vw"
+      />
       <div className="absolute inset-0 bg-black/30" />
       <div className="reveal-load relative z-10 text-center text-white px-4 max-w-3xl mx-auto">
         <h1 className="text-4xl md:text-6xl font-bold leading-tight drop-shadow-md">
