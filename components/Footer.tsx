@@ -26,11 +26,11 @@ export default function Footer() {
             </h4>
             <nav>
               {[
-                { label: "Home", href: "/#" },
+                { label: "Home", href: "/" },
                 { label: "Services", href: "/services" },
-                { label: "Our Work", href: "#our-work" },
+                { label: "Our Work", href: "/work" },
                 { label: "About Us", href: "/about" },
-                { label: "Contact", href: "#contact" },
+                { label: "Contact", href: "/contact" },
               ].map(({ label, href }) => (
                 <a
                   key={label}
