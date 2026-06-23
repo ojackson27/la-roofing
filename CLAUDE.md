@@ -6,14 +6,16 @@
 
 ## Project Summary
 
-Marketing homepage for **LA Roofing**, a Los Angeles roofing company. Built in Next.js 15 (App Router) with Tailwind v4, deployed on Vercel, connected to GitHub.
+Marketing site for **LA Roofing (Exeter) Ltd**, a roofing company based in Exeter, Devon, England (2 Kingfisher Court, Pinhoe Trading Est, Pinhoe, Exeter EX4 8JN · 07791 052508 · 4.97 Google reviews). Built in Next.js 15 (App Router) with Tailwind v4, deployed on Vercel, connected to GitHub.
+
+Real service categories (from Google Business): Industrial Roofing and Cladding, Roofer (general roofing/repairs), Slate and Tiling, Single Ply Roofing.
 
 **Design system:** Teal Monochromatic Foundation — deep teal (`#0A4E46`), near-black (`#0A1F1C`), body teal (`#0B6258`), Electric Mint accent (`#15EAC9`), surface (`#F3F4F6`). Fonts: Montserrat (headings) + Inter (body).
 
 **Homepage sections built:**
 1. Navbar (sticky, backdrop-blur, mobile hamburger)
 2. HeroVideo (full-screen FPV drone video, overlaid CTAs)
-3. MissionServices (mission block + tabbed services: Residential / Commercial / Repair / Maintenance)
+3. MissionServices (mission block + tabbed services: Industrial Roofing & Cladding / Roofer / Slate & Tiling / Single Ply Roofing, with a "View all services" link to `/services`)
 4. WorkReviewsCarousel (horizontal snap-scroll, real photos + reviews)
 5. AboutSection (two-column: photo + copy)
 6. OurWorkBento (bento photo grid — "Recent Projects")
@@ -22,7 +24,20 @@ Marketing homepage for **LA Roofing**, a Los Angeles roofing company. Built in N
 9. ContactSection (contact info + static form)
 10. Footer (4-column: brand, quick links, contact, newsletter)
 
-**Pages not yet built:** Services, Our Work, About Us, Contact (separate pages).
+**Services page built (`app/services/page.tsx`):**
+- ServicesHero (real roofer photo banner, dark overlay, headline)
+- Intro section (Google Business "About" blurb)
+- ServicesGrid (4 cards — Industrial Roofing and Cladding, Roofer, Slate and Tiling, Single Ply Roofing — each with a brand-teal header band, white bold title/icon, description + bullets on white body)
+- ContactSection (reused from homepage)
+
+**About Us page built (`app/about/page.tsx`):**
+- AboutHero (photo-1.jpg banner, dark overlay, "Who We Are" headline)
+- AboutIntro (two-column: photo-7.jpg real branded van/team photo + real Google Business blurb, "Rooted in Exeter")
+- AboutTrustStrip (3-card strip: Fully Insured / Quality Workmanship / Local to Exeter & Devon — dedicated copy, not a reuse of homepage WhyChooseUs)
+- ServiceAreas (photo-9.jpg + checklist: Exeter, Devon, Pinhoe, Heavitree, surrounding areas)
+- ContactSection (reused from homepage)
+
+**Pages not yet built:** Our Work, Contact (separate page).
 
 ## Asset Locations
 
@@ -43,13 +58,9 @@ In the built project (`public/`):
 
 ## Working Directory
 
-The Next.js project lives in the git worktree at:
-```
-C:/Users/ollie/cj-websites/la-roofing/.worktrees/homepage
-```
-Branch: `feature/homepage` (merged to `main` for deploys).
+The Next.js project lives at the repo root: `C:/Users/ollie/cj-websites/la-roofing`.
 
-To work on the site, make edits in `.worktrees/homepage/`, run `npm run build` to verify, then merge to `main` and run `vercel --prod` from that directory to deploy.
+For multi-step feature work, create a fresh git worktree (e.g. `.worktrees/<feature-name>` on a `feature/<name>` branch) per `superpowers:using-git-worktrees`, make edits there, run `npm run build` to verify, then merge to `main` (locally or via PR) and run `vercel --prod` from the repo root to deploy. Don't leave stale uncommitted edits in a worktree's working directory — commit real content changes (like this file) so they survive merges; past sessions lost CLAUDE.md corrections this way.
 
 ## Skills to Use
 
