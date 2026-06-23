@@ -17,9 +17,7 @@ export default function AboutSection() {
       if (frame) return;
       frame = requestAnimationFrame(() => {
         const rect = banner.getBoundingClientRect();
-        const viewportH = window.innerHeight;
-        const progress = (rect.top - viewportH) / (viewportH + rect.height);
-        const offset = Math.max(-1, Math.min(1, progress)) * 50;
+        const offset = Math.max(-100, Math.min(100, rect.top * 0.25));
         imgWrap.style.transform = `translate3d(0, ${offset}px, 0)`;
         frame = 0;
       });
@@ -38,7 +36,7 @@ export default function AboutSection() {
       >
         <div
           ref={imgWrapRef}
-          className="absolute -top-16 -bottom-16 left-0 right-0 will-change-transform"
+          className="absolute -top-28 -bottom-28 left-0 right-0 will-change-transform"
         >
           <Image
             fill
