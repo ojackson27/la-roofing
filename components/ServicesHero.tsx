@@ -54,7 +54,7 @@ export default function ServicesHero() {
   return (
     <section
       ref={sectionRef}
-      className="relative w-full min-h-[480px] md:min-h-[560px] flex items-center justify-center overflow-hidden"
+      className="relative w-full min-h-[480px] md:min-h-screen flex items-center justify-center overflow-hidden"
     >
       <Image
         ref={imageRef}
