@@ -5,7 +5,7 @@ export default function Footer() {
     <footer className="bg-[var(--color-primary)] text-white py-16">
       <div className="max-w-[1280px] mx-auto px-4 md:px-16">
         {/* Logo flanked by quick links and contact info */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 items-center border-b border-white/15 pb-10 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 items-start border-b border-white/15 pb-10 mb-12">
           {/* Quick Links */}
           <div className="text-center md:text-left order-2 md:order-1">
             <h4 className="text-sm font-bold uppercase tracking-wider mb-4">
