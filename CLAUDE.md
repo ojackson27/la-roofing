@@ -18,7 +18,7 @@ Real service categories (from Google Business): Industrial Roofing and Cladding,
 3. MissionServices (mission block + tabbed services: Industrial Roofing & Cladding / Roofer / Slate & Tiling / Single Ply Roofing, with a "View all services" link to `/services`)
 4. WorkReviewsCarousel (horizontal snap-scroll, real photos + reviews)
 5. AboutSection (two-column: photo + copy)
-6. OurWorkBento (bento photo grid — "Recent Projects")
+6. OurWorkCarousel ("Recent Projects" — large snap-scroll carousel with prev/next arrows, shares project data and the click-to-open detail modal with the Our Work page; ends with a black "peek" tab that expands on hover/focus to "View more of our work", linking to `/work`)
 7. WhyChooseUs (4-card feature grid with inline SVGs)
 8. Testimonials (3-card review grid)
 9. ContactSection (contact info + static form)
@@ -37,7 +37,15 @@ Real service categories (from Google Business): Industrial Roofing and Cladding,
 - ServiceAreas (photo-9.jpg + checklist: Exeter, Devon, Pinhoe, Heavitree, surrounding areas)
 - ContactSection (reused from homepage)
 
-**Pages not yet built:** Our Work, Contact (separate page).
+**Our Work page built (`app/work/page.tsx`):**
+- WorkHero (banner, "Our Work" headline)
+- WorkGallery (4-col photo grid of all projects; click a project to open the shared `ProjectModal` with description + real Google review). Project data lives in `lib/projects.ts`, shared with the homepage `OurWorkCarousel`.
+- RealReviews
+- ContactSection (reused from homepage)
+
+**Contact page built (`app/contact/page.tsx`):**
+- ContactHero
+- ContactSection (contact info + form)
 
 ## Asset Locations
 

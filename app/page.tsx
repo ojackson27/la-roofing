@@ -2,7 +2,7 @@ import HeroVideo from '@/components/HeroVideo';
 import MissionServices from '@/components/MissionServices';
 import WorkReviewsCarousel from '@/components/WorkReviewsCarousel';
 import AboutSection from '@/components/AboutSection';
-import OurWorkBento from '@/components/OurWorkBento';
+import OurWorkCarousel from '@/components/OurWorkCarousel';
 import WhyChooseUs from '@/components/WhyChooseUs';
 import ContactSection from '@/components/ContactSection';
 
@@ -13,7 +13,7 @@ export default function Home() {
       <MissionServices />
       <WorkReviewsCarousel />
       <AboutSection />
-      <OurWorkBento />
+      <OurWorkCarousel />
       <WhyChooseUs />
       <ContactSection />
     </main>

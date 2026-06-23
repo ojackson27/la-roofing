@@ -80,6 +80,10 @@ p {
   .scroll-cue {
     animation: none;
   }
+  .peek-tab {
+    transition: none !important;
+    width: 280px !important;
+  }
   * {
     scroll-behavior: auto !important;
   }
