@@ -147,9 +147,17 @@ export default function ContactSection() {
               </span>
             </div>
 
-            {/* Map placeholder */}
-            <div className="mt-auto h-48 bg-[var(--color-trust)] border border-[var(--color-accent)]/40 rounded flex items-center justify-center text-sm text-white/70">
-              Map coming soon
+            {/* Map */}
+            <div className="mt-auto h-48 border border-[var(--color-accent)]/40 rounded overflow-hidden">
+              <iframe
+                title="LA Roofing location map"
+                src="https://www.google.com/maps?q=2+Kingfisher+Court,+Pinhoe+Trading+Est,+Pinhoe,+Exeter+EX4+8JN&output=embed"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              />
             </div>
           </div>
 
