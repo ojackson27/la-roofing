@@ -4,7 +4,6 @@ import WorkReviewsCarousel from '@/components/WorkReviewsCarousel';
 import AboutSection from '@/components/AboutSection';
 import OurWorkBento from '@/components/OurWorkBento';
 import WhyChooseUs from '@/components/WhyChooseUs';
-import Testimonials from '@/components/Testimonials';
 import ContactSection from '@/components/ContactSection';
 
 export default function Home() {
@@ -16,7 +15,6 @@ export default function Home() {
       <AboutSection />
       <OurWorkBento />
       <WhyChooseUs />
-      <Testimonials />
       <ContactSection />
     </main>
   );

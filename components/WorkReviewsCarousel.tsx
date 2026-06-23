@@ -6,24 +6,47 @@ const reviews = [
     alt: "White roof project",
     stars: "★★★★★",
     quote:
-      "LA Roofing replaced our entire roof in just two days. The crew was professional, clean, and the result looks fantastic — we couldn't be happier.",
-    reviewer: "Maria T., Brentwood",
+      "We are so grateful for your super fast, efficient, smooth service after finding a leak last Wednesday evening over the holiday period — fixed within 6 days.",
+    reviewer: "Stuart Kew",
   },
   {
     image: "/images/photo-1.jpg",
     alt: "Roofing project",
     stars: "★★★★★",
     quote:
-      "After years of leaks, LA Roofing finally solved the problem for good. Fair pricing and honest communication throughout the whole process.",
-    reviewer: "James K., Culver City",
+      "Highly recommended. Excellent replacement flat roof and main roof with new slates. Kept informed and work carried out quickly.",
+    reviewer: "Simon Wills",
   },
   {
     image: "/images/photo-2.jpg",
     alt: "Roofing project",
     stars: "★★★★★",
     quote:
-      "They showed up on time, finished ahead of schedule, and left the site spotless. Our new roof looks incredible and the warranty gives us real peace of mind.",
-    reviewer: "Sandra L., Sherman Oaks",
+      "Thank you L A Roofing for fixing my leaking roof within half an hour of my phone call — a team of guys turned up to repair my leaking roof in heavy rain and quickly identified the fault.",
+    reviewer: "Paul Baber",
+  },
+  {
+    image: "/images/photo-1.jpg",
+    alt: "Roofing project",
+    stars: "★★★★★",
+    quote:
+      "Recently had my roof fixed by L A Roofing and received an amazing service, brilliant job done in fixing the problem. Would definitely recommend. I will be using them again.",
+    reviewer: "Sadie Harris",
+  },
+  {
+    image: "/images/photo-2.jpg",
+    alt: "Roofing project",
+    stars: "★★★★★",
+    quote:
+      "Brilliant service, can't recommend this company enough. Even after they had finished and a new problem arose on another part of my roof, they were straight back and it was sorted.",
+    reviewer: "Ali Clark",
+  },
+  {
+    image: "/images/white-roof.jpg",
+    alt: "White roof project",
+    stars: "★★★★★",
+    quote: "Brilliant service. Would recommend to everyone!",
+    reviewer: "Adrian Irimescu",
   },
 ];
 
@@ -31,9 +54,14 @@ export default function WorkReviewsCarousel() {
   return (
     <section id="our-work" className="w-full bg-[var(--color-surface)] border-t border-b border-[var(--color-surface-variant)] py-20">
       <div className="max-w-[1280px] mx-auto px-4 md:px-16 flex flex-col gap-8">
-        <h2 className="reveal text-3xl font-bold text-[var(--color-trust)] text-center">
-          Our Work and Reviews
-        </h2>
+        <div className="reveal flex flex-col items-center gap-2">
+          <h2 className="text-3xl font-bold text-[var(--color-trust)] text-center">
+            Our Work and Reviews
+          </h2>
+          <p className="text-[var(--color-body-teal)] text-base">
+            Rated 4.9 out of 5 on Google, based on real reviews from customers across Exeter and Devon.
+          </p>
+        </div>
         <div
           className="flex overflow-x-auto gap-6 pb-4 snap-x snap-mandatory"
           style={{ scrollbarWidth: "none" }}
