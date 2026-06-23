@@ -47,11 +47,30 @@ function Stars() {
 export default function RealReviews() {
   return (
     <section className="relative w-full py-20 bg-[var(--color-surface)] overflow-hidden">
-      <div className="pointer-events-none absolute inset-0 -z-0">
-        <div className="absolute -top-32 -left-32 w-[32rem] h-[32rem] rounded-full bg-[var(--color-trust)]/30 blur-[100px] animate-[drift-a_22s_ease-in-out_infinite]" />
-        <div className="absolute top-1/3 -right-40 w-[28rem] h-[28rem] rounded-full bg-[var(--color-accent)]/25 blur-[110px] animate-[drift-b_26s_ease-in-out_infinite]" />
-        <div className="absolute -bottom-40 left-1/4 w-[26rem] h-[26rem] rounded-full bg-[var(--color-body-teal)]/25 blur-[100px] animate-[drift-c_30s_ease-in-out_infinite]" />
-      </div>
+      <div
+        className="pointer-events-none absolute inset-0 -z-0 opacity-[0.07]"
+        style={{
+          backgroundImage:
+            "repeating-linear-gradient(45deg, var(--color-trust) 0, var(--color-trust) 1px, transparent 1px, transparent 64px)",
+        }}
+      />
+      <svg
+        className="pointer-events-none absolute -top-16 -left-16 w-72 h-72 text-[var(--color-trust)]/20 animate-[spin-slow_60s_linear_infinite]"
+        viewBox="0 0 200 200"
+        fill="none"
+      >
+        <polygon points="100,10 190,60 190,140 100,190 10,140 10,60" stroke="currentColor" strokeWidth="1.5" />
+        <polygon points="100,50 150,75 150,125 100,150 50,125 50,75" stroke="currentColor" strokeWidth="1.5" />
+      </svg>
+      <svg
+        className="pointer-events-none absolute -bottom-20 -right-20 w-80 h-80 text-[var(--color-accent)]/25 animate-[spin-slow-reverse_70s_linear_infinite]"
+        viewBox="0 0 200 200"
+        fill="none"
+      >
+        <rect x="20" y="20" width="160" height="160" stroke="currentColor" strokeWidth="1.5" />
+        <line x1="20" y1="20" x2="180" y2="180" stroke="currentColor" strokeWidth="1" />
+        <line x1="180" y1="20" x2="20" y2="180" stroke="currentColor" strokeWidth="1" />
+      </svg>
       <div className="relative z-10 max-w-[1280px] mx-auto px-4 md:px-16 flex flex-col gap-8">
         <div className="flex flex-col items-center gap-2 text-center">
           <h2 className="reveal text-3xl font-bold text-[var(--color-trust)]">

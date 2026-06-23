@@ -70,19 +70,14 @@ p {
   animation: bob 1.8s ease-in-out infinite;
 }
 
-@keyframes drift-a {
-  0%, 100% { transform: translate(0, 0) scale(1); }
-  50% { transform: translate(40px, 30px) scale(1.1); }
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
 }
 
-@keyframes drift-b {
-  0%, 100% { transform: translate(0, 0) scale(1); }
-  50% { transform: translate(-50px, 20px) scale(1.15); }
-}
-
-@keyframes drift-c {
-  0%, 100% { transform: translate(0, 0) scale(1); }
-  50% { transform: translate(30px, -40px) scale(1.08); }
+@keyframes spin-slow-reverse {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(-360deg); }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -99,7 +94,7 @@ p {
     transition: none !important;
     width: 280px !important;
   }
-  [class*="animate-[drift-"] {
+  [class*="animate-[spin-slow"] {
     animation: none !important;
   }
   * {
