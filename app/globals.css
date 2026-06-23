@@ -70,6 +70,21 @@ p {
   animation: bob 1.8s ease-in-out infinite;
 }
 
+@keyframes drift-a {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(40px, 30px) scale(1.1); }
+}
+
+@keyframes drift-b {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(-50px, 20px) scale(1.15); }
+}
+
+@keyframes drift-c {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(30px, -40px) scale(1.08); }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .reveal,
   .reveal-load {
@@ -83,6 +98,9 @@ p {
   .peek-tab {
     transition: none !important;
     width: 280px !important;
+  }
+  [class*="animate-[drift-"] {
+    animation: none !important;
   }
   * {
     scroll-behavior: auto !important;

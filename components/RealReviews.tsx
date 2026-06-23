@@ -38,7 +38,7 @@ const reviews = [
 
 function Stars() {
   return (
-    <div className="text-[var(--color-primary)] text-lg" aria-label="5 out of 5 stars">
+    <div className="text-amber-400 text-lg" aria-label="5 out of 5 stars">
       ★★★★★
     </div>
   );
@@ -46,8 +46,13 @@ function Stars() {
 
 export default function RealReviews() {
   return (
-    <section className="w-full py-20 bg-[var(--color-surface)]">
-      <div className="max-w-[1280px] mx-auto px-4 md:px-16 flex flex-col gap-8">
+    <section className="relative w-full py-20 bg-[var(--color-surface)] overflow-hidden">
+      <div className="pointer-events-none absolute inset-0 -z-0">
+        <div className="absolute -top-32 -left-32 w-[32rem] h-[32rem] rounded-full bg-[var(--color-trust)]/30 blur-[100px] animate-[drift-a_22s_ease-in-out_infinite]" />
+        <div className="absolute top-1/3 -right-40 w-[28rem] h-[28rem] rounded-full bg-[var(--color-accent)]/25 blur-[110px] animate-[drift-b_26s_ease-in-out_infinite]" />
+        <div className="absolute -bottom-40 left-1/4 w-[26rem] h-[26rem] rounded-full bg-[var(--color-body-teal)]/25 blur-[100px] animate-[drift-c_30s_ease-in-out_infinite]" />
+      </div>
+      <div className="relative z-10 max-w-[1280px] mx-auto px-4 md:px-16 flex flex-col gap-8">
         <div className="flex flex-col items-center gap-2 text-center">
           <h2 className="reveal text-3xl font-bold text-[var(--color-trust)]">
             What Our Customers Say
