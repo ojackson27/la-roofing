@@ -18,7 +18,7 @@ Real service categories (from Google Business): Industrial Roofing and Cladding,
 3. MissionServices (mission block + tabbed services: Industrial Roofing & Cladding / Roofer / Slate & Tiling / Single Ply Roofing, with a "View all services" link to `/services`)
 4. WorkReviewsCarousel (horizontal snap-scroll, real photos + reviews)
 5. AboutSection (two-column: photo + copy)
-6. OurWorkCarousel ("Recent Projects" — large snap-scroll carousel with prev/next arrows, shares project data and the click-to-open detail modal with the Our Work page; ends with a black "peek" tab that expands on hover/focus to "View more of our work", linking to `/work`)
+6. OurWorkCarousel ("Recent Projects" — shows the 3 featured projects, shares project data and the click-to-open detail modal with the Our Work page; a black "peek" tab sits immediately after the 3rd card and expands on hover/focus to "View more of our work", linking to `/work`)
 7. WhyChooseUs (4-card feature grid with inline SVGs)
 8. Testimonials (3-card review grid)
 9. ContactSection (contact info + static form)

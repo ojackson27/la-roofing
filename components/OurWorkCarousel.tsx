@@ -6,14 +6,17 @@ import Link from "next/link";
 import { projects } from "@/lib/projects";
 import ProjectModal from "@/components/ProjectModal";
 
-const CARD_WIDTH = 400;
+// Only the 3 most recent projects show on the homepage; the full
+// set lives on the Our Work page.
+const FEATURED_PROJECTS = projects.slice(0, 3);
+const CARD_WIDTH_STYLE = "calc((100% - 7rem) / 3)";
 
 export default function OurWorkCarousel() {
   const trackRef = useRef<HTMLDivElement>(null);
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
   const [atStart, setAtStart] = useState(true);
   const [atEnd, setAtEnd] = useState(false);
-  const active = activeIndex !== null ? projects[activeIndex] : null;
+  const active = activeIndex !== null ? FEATURED_PROJECTS[activeIndex] : null;
 
   const updateScrollState = () => {
     const el = trackRef.current;
@@ -23,7 +26,11 @@ export default function OurWorkCarousel() {
   };
 
   const scrollByCard = (direction: 1 | -1) => {
-    trackRef.current?.scrollBy({ left: direction * (CARD_WIDTH + 24), behavior: "smooth" });
+    const el = trackRef.current;
+    if (!el) return;
+    const card = el.querySelector<HTMLElement>("[data-card]");
+    const cardWidth = card?.offsetWidth ?? el.clientWidth / 3;
+    el.scrollBy({ left: direction * (cardWidth + 24), behavior: "smooth" });
   };
 
   return (
@@ -59,12 +66,13 @@ export default function OurWorkCarousel() {
             className="flex overflow-x-auto gap-6 pb-4 snap-x snap-mandatory"
             style={{ scrollbarWidth: "none" }}
           >
-            {projects.map((project, i) => (
+            {FEATURED_PROJECTS.map((project, i) => (
               <button
                 key={project.title}
+                data-card
                 type="button"
                 onClick={() => setActiveIndex(i)}
-                style={{ width: CARD_WIDTH, height: 320 }}
+                style={{ width: CARD_WIDTH_STYLE, height: 320, minWidth: 240 }}
                 className="group relative flex-shrink-0 snap-start rounded overflow-hidden border border-[var(--color-surface-variant)] text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-primary)]"
               >
                 <Image
@@ -72,7 +80,7 @@ export default function OurWorkCarousel() {
                   src={project.src}
                   alt={project.alt}
                   className="object-cover transition-transform duration-300 group-hover:scale-105"
-                  sizes="400px"
+                  sizes="(max-width: 768px) 85vw, 33vw"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/0 to-black/0" />
                 <div className="absolute bottom-0 left-0 right-0 p-4">
