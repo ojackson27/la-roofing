@@ -8,7 +8,7 @@ const navLinks = [
   { label: 'Services', href: '/services' },
   { label: 'Our Work', href: '#our-work' },
   { label: 'About Us', href: '/about' },
-  { label: 'Contact', href: '#contact' },
+  { label: 'Contact', href: '/contact' },
 ];
 
 export default function Navbar() {
@@ -45,7 +45,7 @@ export default function Navbar() {
         <div className="flex items-center">
           {/* Get a Quote button — desktop only */}
           <a
-            href="#contact"
+            href="/contact"
             className="hidden md:inline-block px-6 py-2.5 text-sm font-semibold rounded bg-[var(--color-primary)] text-white hover:bg-[var(--color-accent)] hover:text-[var(--color-trust)] transition-colors"
           >
             Get a Quote
