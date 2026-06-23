@@ -27,7 +27,7 @@ export default function HeroVideo() {
           type="button"
           onClick={() => setShowModal((open) => !open)}
           aria-expanded={showModal}
-          className="inline-flex items-center min-h-[44px] bg-[var(--color-accent)] text-[var(--color-trust)] font-semibold px-5 md:px-8 py-3 rounded hover:opacity-90 transition-opacity"
+          className="inline-flex items-center min-h-[44px] bg-[var(--color-accent)] text-[var(--color-trust)] font-semibold px-5 md:px-8 py-3 rounded hover:opacity-90 transition-opacity focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--color-trust)]"
         >
           Calculate Your Roof Cost
         </button>
@@ -52,13 +52,13 @@ export default function HeroVideo() {
         <div className="flex flex-wrap gap-4 justify-center">
           <a
             href="#contact"
-            className="inline-flex items-center min-h-[44px] bg-[var(--color-accent)] text-[var(--color-trust)] font-semibold px-8 py-3 rounded hover:opacity-90 transition-opacity"
+            className="inline-flex items-center min-h-[44px] bg-[var(--color-accent)] text-[var(--color-trust)] font-semibold px-8 py-3 rounded hover:opacity-90 transition-opacity focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--color-trust)]"
           >
             Get Estimate
           </a>
           <a
             href="#services"
-            className="inline-flex items-center min-h-[44px] border-2 border-white text-white font-semibold px-8 py-3 rounded hover:bg-white hover:text-[var(--color-trust)] transition-colors"
+            className="inline-flex items-center min-h-[44px] border-2 border-white text-white font-semibold px-8 py-3 rounded hover:bg-white hover:text-[var(--color-trust)] transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--color-trust)]"
           >
             Our Services
           </a>
@@ -68,7 +68,7 @@ export default function HeroVideo() {
       <a
         href="#services"
         aria-label="Scroll to services"
-        className="scroll-cue absolute bottom-8 left-1/2 -translate-x-1/2 z-10 text-white/80 hover:text-white transition-colors"
+        className="scroll-cue absolute bottom-8 left-1/2 -translate-x-1/2 z-10 text-white/80 hover:text-white transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)] rounded-full"
       >
         <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
           <polyline points="6 9 12 15 18 9" />

@@ -50,7 +50,7 @@ export default function WhyChooseUs() {
           {cards.map((card) => (
             <div
               key={card.title}
-              className="flex flex-col items-center gap-4 p-6 border border-[var(--color-surface-variant)] bg-white rounded text-center transition-shadow duration-200 hover:shadow-md"
+              className="flex flex-col items-center gap-4 p-6 border border-[var(--color-surface-variant)] bg-white rounded text-center transition-colors duration-200 hover:border-[var(--color-accent)]"
             >
               <div className="w-14 h-14 bg-[var(--color-surface)] rounded flex items-center justify-center text-[var(--color-primary)]">
                 {card.icon}

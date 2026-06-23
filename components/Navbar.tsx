@@ -4,7 +4,7 @@ import { useState } from 'react';
 import Image from 'next/image';
 
 const navLinks = [
-  { label: 'Home', href: '#' },
+  { label: 'Home', href: '/' },
   { label: 'Services', href: '/services' },
   { label: 'Our Work', href: '/work' },
   { label: 'About Us', href: '/about' },
@@ -18,7 +18,7 @@ export default function Navbar() {
     <header className="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-[var(--color-surface-variant)]">
       <div className="max-w-[1280px] mx-auto px-4 md:px-16 flex justify-between items-center h-16">
         {/* Logo */}
-        <a href="/">
+        <a href="/" className="rounded focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-primary)]">
           <Image
             src="/images/logo.png"
             alt="LA Roofing logo"
@@ -34,7 +34,7 @@ export default function Navbar() {
             <a
               key={link.label}
               href={link.href}
-              className="text-sm font-medium text-[var(--color-trust)] hover:text-[var(--color-primary)] transition-colors"
+              className="text-sm font-medium text-[var(--color-trust)] hover:text-[var(--color-primary)] transition-colors rounded focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-primary)]"
             >
               {link.label}
             </a>
@@ -46,14 +46,14 @@ export default function Navbar() {
           {/* Get a Quote button — desktop only */}
           <a
             href="/contact"
-            className="hidden md:inline-block px-6 py-2.5 text-sm font-semibold rounded bg-[var(--color-primary)] text-white hover:bg-[var(--color-accent)] hover:text-[var(--color-trust)] transition-colors"
+            className="hidden md:inline-flex items-center min-h-[44px] px-6 py-2.5 text-sm font-semibold rounded bg-[var(--color-primary)] text-white hover:bg-[var(--color-accent)] hover:text-[var(--color-trust)] transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)]"
           >
             Get a Quote
           </a>
 
           {/* Hamburger — mobile only */}
           <button
-            className="md:hidden flex items-center justify-center w-11 h-11 -mr-2 text-[var(--color-trust)]"
+            className="md:hidden flex items-center justify-center w-11 h-11 -mr-2 text-[var(--color-trust)] rounded focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-primary)]"
             onClick={() => setMenuOpen((prev) => !prev)}
             aria-label={menuOpen ? 'Close menu' : 'Open menu'}
             aria-expanded={menuOpen}
@@ -104,7 +104,7 @@ export default function Navbar() {
               key={link.label}
               href={link.href}
               onClick={() => setMenuOpen(false)}
-              className="px-4 min-h-[44px] flex items-center text-base text-[var(--color-trust)] hover:text-[var(--color-primary)] hover:bg-[var(--color-surface)] transition-colors"
+              className="px-4 min-h-[44px] flex items-center text-base text-[var(--color-trust)] hover:text-[var(--color-primary)] hover:bg-[var(--color-surface)] transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-[var(--color-primary)]"
             >
               {link.label}
             </a>

@@ -40,7 +40,7 @@ export default function MissionServices() {
             <a
               key={service.title}
               href="/services"
-              className="group flex flex-col overflow-hidden rounded border border-[var(--color-surface-variant)] transition-shadow hover:shadow-lg"
+              className="group flex flex-col overflow-hidden rounded border border-[var(--color-surface-variant)] transition-colors hover:border-[var(--color-accent)]"
             >
               <div className="relative w-full aspect-[3/4]">
                 <Image

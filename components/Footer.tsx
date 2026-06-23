@@ -22,7 +22,7 @@ export default function Footer() {
                 <a
                   key={label}
                   href={href}
-                  className="inline-block text-white/80 text-sm hover:text-[var(--color-accent)] transition-colors py-0.5"
+                  className="inline-flex items-center min-h-[44px] text-white/80 text-sm hover:text-[var(--color-accent)] transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)] rounded"
                 >
                   {label}
                 </a>
@@ -135,9 +135,9 @@ export default function Footer() {
               type="email"
               placeholder="Your email address"
               aria-label="Email address for newsletter"
-              className="flex-1 bg-white/10 border border-white/20 rounded px-3 py-2 text-sm text-white placeholder-white/60 focus:outline-none focus:border-[var(--color-accent)]"
+              className="flex-1 min-h-[44px] bg-white/10 border border-white/20 rounded px-3 py-2 text-sm text-white placeholder-white/60 focus:outline-none focus:border-[var(--color-accent)] focus:ring-2 focus:ring-[var(--color-accent)]"
             />
-            <button className="border border-[var(--color-accent)] text-[var(--color-accent)] text-sm font-semibold py-2 px-5 rounded hover:bg-[var(--color-accent)] hover:text-[var(--color-trust)] transition-colors">
+            <button className="min-h-[44px] border border-[var(--color-accent)] text-[var(--color-accent)] text-sm font-semibold py-2 px-5 rounded hover:bg-[var(--color-accent)] hover:text-[var(--color-trust)] transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)]">
               Subscribe
             </button>
           </div>
@@ -147,10 +147,10 @@ export default function Footer() {
         <div className="border-t border-white/20 pt-5 flex flex-col md:flex-row justify-between items-center gap-4 text-white/70 text-sm">
           <span>© 2026 LA Roofing. All rights reserved.</span>
           <div className="flex gap-6">
-            <a href="#" className="hover:text-white transition-colors">
+            <a href="#" className="inline-flex items-center min-h-[44px] hover:text-white transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)] rounded">
               Privacy Policy
             </a>
-            <a href="#" className="hover:text-white transition-colors">
+            <a href="#" className="inline-flex items-center min-h-[44px] hover:text-white transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)] rounded">
               Terms of Service
             </a>
           </div>

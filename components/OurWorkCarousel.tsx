@@ -46,7 +46,7 @@ export default function OurWorkCarousel() {
             onClick={() => scrollByCard(-1)}
             disabled={atStart}
             aria-label="Scroll to previous project"
-            className="hidden md:flex absolute left-0 top-1/2 -translate-y-1/2 -translate-x-5 z-10 w-11 h-11 items-center justify-center rounded-full bg-white text-[var(--color-trust)] border border-[var(--color-surface-variant)] shadow-md hover:bg-[var(--color-surface)] disabled:opacity-0 disabled:pointer-events-none focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-primary)]"
+            className="hidden md:flex absolute left-0 top-1/2 -translate-y-1/2 -translate-x-5 z-10 w-11 h-11 items-center justify-center rounded-full bg-white text-[var(--color-trust)] border border-[var(--color-surface-variant)] hover:bg-[var(--color-surface)] disabled:opacity-0 disabled:pointer-events-none focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-primary)]"
           >
             ‹
           </button>
@@ -55,7 +55,7 @@ export default function OurWorkCarousel() {
             onClick={() => scrollByCard(1)}
             disabled={atEnd}
             aria-label="Scroll to next project"
-            className="hidden md:flex absolute right-0 top-1/2 -translate-y-1/2 translate-x-5 z-10 w-11 h-11 items-center justify-center rounded-full bg-white text-[var(--color-trust)] border border-[var(--color-surface-variant)] shadow-md hover:bg-[var(--color-surface)] disabled:opacity-0 disabled:pointer-events-none focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-primary)]"
+            className="hidden md:flex absolute right-0 top-1/2 -translate-y-1/2 translate-x-5 z-10 w-11 h-11 items-center justify-center rounded-full bg-white text-[var(--color-trust)] border border-[var(--color-surface-variant)] hover:bg-[var(--color-surface)] disabled:opacity-0 disabled:pointer-events-none focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-primary)]"
           >
             ›
           </button>

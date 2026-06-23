@@ -64,7 +64,7 @@ export default function ContactSection() {
             </h3>
 
             {/* Phone */}
-            <div className="flex items-start gap-3">
+            <div className="flex items-center gap-3">
               <span className="w-9 h-9 rounded-full bg-[var(--color-accent)]/15 border border-[var(--color-accent)] text-[var(--color-accent)] flex-shrink-0 flex items-center justify-center">
                 <svg
                   className="w-5 h-5"
@@ -84,14 +84,14 @@ export default function ContactSection() {
               </span>
               <a
                 href="tel:+447791052508"
-                className="text-white text-base mt-1.5 hover:underline hover:text-[var(--color-accent)]"
+                className="inline-flex items-center min-h-[44px] text-white text-base hover:underline hover:text-[var(--color-accent)] focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)] rounded"
               >
                 07791 052508
               </a>
             </div>
 
             {/* Mail */}
-            <div className="flex items-start gap-3">
+            <div className="flex items-center gap-3">
               <span className="w-9 h-9 rounded-full bg-[var(--color-accent)]/15 border border-[var(--color-accent)] text-[var(--color-accent)] flex-shrink-0 flex items-center justify-center">
                 <svg
                   className="w-5 h-5"
@@ -111,7 +111,7 @@ export default function ContactSection() {
               </span>
               <a
                 href="mailto:info@laroofing.com"
-                className="text-white text-base mt-1.5 hover:underline hover:text-[var(--color-accent)]"
+                className="inline-flex items-center min-h-[44px] text-white text-base hover:underline hover:text-[var(--color-accent)] focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)] rounded"
               >
                 info@laroofing.com
               </a>

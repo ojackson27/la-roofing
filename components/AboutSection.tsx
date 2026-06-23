@@ -84,7 +84,7 @@ export default function AboutSection() {
         {cards.map((card, i) => (
           <div
             key={i}
-            className="reveal rounded-lg bg-[var(--color-surface)] border border-[var(--color-accent)] p-8 shadow-[0_0_0_1px_rgba(21,234,201,0.15),0_8px_20px_-8px_rgba(21,234,201,0.35)] transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-[0_0_0_1px_rgba(21,234,201,0.25),0_14px_28px_-10px_rgba(21,234,201,0.5)]"
+            className="reveal rounded-lg bg-[var(--color-surface)] border-2 border-[var(--color-accent)] p-8 transition-colors duration-300 ease-out hover:bg-white"
           >
             <div className="w-12 h-12 mb-5 rounded-full bg-white flex items-center justify-center text-[var(--color-primary)]">
               {card.icon}

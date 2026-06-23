@@ -73,7 +73,7 @@ export default function ServicesGrid() {
           {services.map((service) => (
             <div
               key={service.title}
-              className="flex flex-col border border-[var(--color-surface-variant)] bg-white rounded overflow-hidden transition-shadow duration-200 hover:shadow-md"
+              className="flex flex-col border border-[var(--color-surface-variant)] bg-white rounded overflow-hidden transition-colors duration-200 hover:border-[var(--color-accent)]"
             >
               <div className="flex items-center gap-4 px-8 py-8 bg-[var(--color-primary)]">
                 <div className="w-14 h-14 flex items-center justify-center text-white flex-shrink-0">

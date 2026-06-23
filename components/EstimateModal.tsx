@@ -36,7 +36,7 @@ export default function EstimateModal({ onClose }: { onClose: () => void }) {
         role="dialog"
         aria-modal="true"
         aria-label="Get a Quick Estimate"
-        className="absolute right-0 top-full mt-3 z-50 w-[92vw] max-w-sm max-h-[80vh] overflow-y-auto bg-white rounded shadow-xl"
+        className="fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 md:absolute md:left-auto md:top-full md:right-0 md:translate-x-0 md:translate-y-0 md:mt-3 z-50 w-[92vw] max-w-sm max-h-[85vh] overflow-y-auto bg-white border border-[var(--color-surface-variant)] rounded"
         onClick={(e) => e.stopPropagation()}
       >
         <button
@@ -112,7 +112,7 @@ export default function EstimateModal({ onClose }: { onClose: () => void }) {
             </p>
             <a
               href="#contact"
-              className="inline-flex items-center justify-center min-h-[44px] bg-[var(--color-primary)] text-white font-semibold px-8 py-3 rounded hover:opacity-90 transition-opacity"
+              className="inline-flex items-center justify-center min-h-[44px] bg-[var(--color-primary)] text-white font-semibold px-8 py-3 rounded hover:opacity-90 transition-opacity focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)]"
             >
               Book Site Survey
             </a>

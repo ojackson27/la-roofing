@@ -28,7 +28,7 @@ export default function ProjectModal({
       onClick={onClose}
     >
       <div
-        className="relative w-full max-w-3xl max-h-[90vh] overflow-y-auto bg-white rounded shadow-xl"
+        className="relative w-full max-w-3xl max-h-[90vh] overflow-y-auto bg-white border border-[var(--color-surface-variant)] rounded"
         onClick={(e) => e.stopPropagation()}
       >
         <button
@@ -56,8 +56,19 @@ export default function ProjectModal({
           </div>
           <h3 className="text-2xl font-bold text-[var(--color-trust)]">{project.title}</h3>
           <div className="flex flex-wrap gap-6 text-sm text-[var(--color-body-teal)]">
-            <span>📍 {project.location}</span>
-            <span>⏱ {project.duration}</span>
+            <span className="inline-flex items-center gap-1.5">
+              <svg className="w-4 h-4 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                <path strokeLinecap="round" strokeLinejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg>
+              {project.location}
+            </span>
+            <span className="inline-flex items-center gap-1.5">
+              <svg className="w-4 h-4 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              {project.duration}
+            </span>
           </div>
           <p className="text-[var(--color-body-teal)] leading-relaxed">{project.description}</p>
           <div className="mt-2 border-t border-[var(--color-surface-variant)] pt-4">
