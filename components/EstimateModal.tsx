@@ -25,15 +25,18 @@ export default function EstimateModal({ onClose }: { onClose: () => void }) {
   const estimatedCost = area * MATERIAL_RATES[material];
 
   return (
-    <div
-      role="dialog"
-      aria-modal="true"
-      aria-label="Get a Quick Estimate"
-      className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 p-4"
-      onClick={onClose}
-    >
+    <>
       <div
-        className="relative w-full max-w-lg bg-white rounded shadow-xl"
+        className="fixed inset-0 z-40"
+        aria-hidden="true"
+        onClick={onClose}
+      />
+
+      <div
+        role="dialog"
+        aria-modal="true"
+        aria-label="Get a Quick Estimate"
+        className="absolute right-0 top-full mt-3 z-50 w-[92vw] max-w-sm max-h-[80vh] overflow-y-auto bg-white rounded shadow-xl"
         onClick={(e) => e.stopPropagation()}
       >
         <button
@@ -45,7 +48,7 @@ export default function EstimateModal({ onClose }: { onClose: () => void }) {
           ✕
         </button>
 
-        <div className="p-6 md:p-8 flex flex-col gap-6">
+        <div className="p-5 md:p-6 flex flex-col gap-5">
           <h2 className="text-2xl font-bold font-[var(--font-montserrat)] text-[var(--color-trust)]">
             Get a Quick Estimate
           </h2>
@@ -116,6 +119,6 @@ export default function EstimateModal({ onClose }: { onClose: () => void }) {
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }

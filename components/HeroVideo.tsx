@@ -22,13 +22,18 @@ export default function HeroVideo() {
 
       <div className="absolute inset-0 bg-black/55" />
 
-      <button
-        type="button"
-        onClick={() => setShowModal(true)}
-        className="absolute top-6 right-4 md:top-8 md:right-8 z-20 inline-flex items-center min-h-[44px] bg-[var(--color-accent)] text-[var(--color-trust)] font-semibold px-5 md:px-8 py-3 rounded hover:opacity-90 transition-opacity"
-      >
-        Calculate Your Roof Cost
-      </button>
+      <div className="absolute top-6 right-4 md:top-8 md:right-8 z-20">
+        <button
+          type="button"
+          onClick={() => setShowModal((open) => !open)}
+          aria-expanded={showModal}
+          className="inline-flex items-center min-h-[44px] bg-[var(--color-accent)] text-[var(--color-trust)] font-semibold px-5 md:px-8 py-3 rounded hover:opacity-90 transition-opacity"
+        >
+          Calculate Your Roof Cost
+        </button>
+
+        {showModal && <EstimateModal onClose={() => setShowModal(false)} />}
+      </div>
 
       <div className="reveal-load relative z-10 text-center text-white px-4 max-w-4xl mx-auto flex flex-col items-center gap-6">
         <Image
@@ -59,8 +64,6 @@ export default function HeroVideo() {
           </a>
         </div>
       </div>
-
-      {showModal && <EstimateModal onClose={() => setShowModal(false)} />}
 
       <a
         href="#services"
