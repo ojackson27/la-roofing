@@ -4,25 +4,10 @@ export default function Footer() {
   return (
     <footer className="bg-[var(--color-primary)] text-white py-16">
       <div className="max-w-[1280px] mx-auto px-4 md:px-16">
-        {/* Logo banner — large, centered focal element */}
-        <div className="flex flex-col items-center text-center border-b border-white/15 pb-10 mb-12">
-          <Image
-            src="/images/logo.png"
-            width={240}
-            height={80}
-            alt="LA Roofing (Exeter) Ltd logo"
-            className="w-[200px] sm:w-[260px] md:w-[300px] h-auto object-contain"
-            priority={false}
-          />
-          <p className="text-white/80 text-sm md:text-base mt-4 max-w-xl leading-relaxed">
-            Exeter&apos;s trusted roofing specialists. Quality work, guaranteed results.
-          </p>
-        </div>
-
-        {/* Links / contact / newsletter — arranged beneath the logo banner */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-12">
+        {/* Logo flanked by quick links and contact info */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 items-center border-b border-white/15 pb-10 mb-12">
           {/* Quick Links */}
-          <div className="text-center md:text-left">
+          <div className="text-center md:text-left order-2 md:order-1">
             <h4 className="text-sm font-bold uppercase tracking-wider mb-4">
               Quick Links
             </h4>
@@ -45,8 +30,23 @@ export default function Footer() {
             </nav>
           </div>
 
+          {/* Logo */}
+          <div className="flex flex-col items-center text-center order-1 md:order-2">
+            <Image
+              src="/images/logo-white-full.png"
+              width={300}
+              height={163}
+              alt="LA Roofing (Exeter) Ltd logo"
+              className="w-[220px] sm:w-[260px] md:w-[280px] h-auto object-contain"
+              priority={false}
+            />
+            <p className="text-white/80 text-sm md:text-base mt-4 max-w-xs leading-relaxed">
+              Exeter&apos;s trusted roofing specialists. Quality work, guaranteed results.
+            </p>
+          </div>
+
           {/* Contact */}
-          <div className="text-center md:text-left">
+          <div className="text-center md:text-left order-3">
             <h4 className="text-sm font-bold uppercase tracking-wider mb-4">
               Contact Us
             </h4>
@@ -120,22 +120,24 @@ export default function Footer() {
               </div>
             </div>
           </div>
+        </div>
 
-          {/* Newsletter */}
-          <div className="text-center md:text-left">
-            <h4 className="text-sm font-bold uppercase tracking-wider mb-4">
-              Stay Updated
-            </h4>
-            <p className="text-white/80 text-sm">
-              Subscribe for roofing tips and seasonal maintenance reminders.
-            </p>
+        {/* Newsletter */}
+        <div className="flex flex-col items-center text-center max-w-md mx-auto mb-12">
+          <h4 className="text-sm font-bold uppercase tracking-wider mb-4">
+            Stay Updated
+          </h4>
+          <p className="text-white/80 text-sm">
+            Subscribe for roofing tips and seasonal maintenance reminders.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-2 w-full mt-3">
             <input
               type="email"
               placeholder="Your email address"
               aria-label="Email address for newsletter"
-              className="w-full bg-white/10 border border-white/20 rounded px-3 py-2 text-sm text-white placeholder-white/60 focus:outline-none focus:border-[var(--color-accent)] mt-3"
+              className="flex-1 bg-white/10 border border-white/20 rounded px-3 py-2 text-sm text-white placeholder-white/60 focus:outline-none focus:border-[var(--color-accent)]"
             />
-            <button className="w-full border border-[var(--color-accent)] text-[var(--color-accent)] text-sm font-semibold py-2 rounded hover:bg-[var(--color-accent)] hover:text-[var(--color-trust)] transition-colors mt-2">
+            <button className="border border-[var(--color-accent)] text-[var(--color-accent)] text-sm font-semibold py-2 px-5 rounded hover:bg-[var(--color-accent)] hover:text-[var(--color-trust)] transition-colors">
               Subscribe
             </button>
           </div>
