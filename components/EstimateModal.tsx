@@ -93,9 +93,13 @@ export default function EstimateModal({ onClose }: { onClose: () => void }) {
             </select>
           </div>
 
-          <div className="bg-[var(--color-surface)] rounded p-4">
+          <div
+            className="bg-[var(--color-surface)] rounded p-4"
+            aria-live="polite"
+            role="status"
+          >
             <h3 className="text-xl font-bold text-[var(--color-trust)]">
-              Estimated Cost: £{estimatedCost.toLocaleString("en-GB")}
+              Estimated Cost: £{Math.round(estimatedCost).toLocaleString("en-GB")}
             </h3>
           </div>
 
