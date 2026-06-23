@@ -2,29 +2,31 @@ import Image from "next/image";
 
 export default function Footer() {
   return (
-    <footer className="bg-[var(--color-primary)] text-white py-20">
+    <footer className="bg-[var(--color-primary)] text-white py-16">
       <div className="max-w-[1280px] mx-auto px-4 md:px-16">
-        {/* 4-column grid */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
-          {/* Column 1 — Brand */}
-          <div>
-            <Image
-              src="/images/logo.png"
-              width={120}
-              height={40}
-              alt="LA Roofing"
-            />
-            <p className="text-white/80 text-sm mt-3 leading-relaxed">
-              Exeter&apos;s trusted roofing specialists. Quality work, guaranteed results.
-            </p>
-          </div>
+        {/* Logo banner — large, centered focal element */}
+        <div className="flex flex-col items-center text-center border-b border-white/15 pb-10 mb-12">
+          <Image
+            src="/images/logo.png"
+            width={240}
+            height={80}
+            alt="LA Roofing (Exeter) Ltd logo"
+            className="w-[200px] sm:w-[260px] md:w-[300px] h-auto object-contain"
+            priority={false}
+          />
+          <p className="text-white/80 text-sm md:text-base mt-4 max-w-xl leading-relaxed">
+            Exeter&apos;s trusted roofing specialists. Quality work, guaranteed results.
+          </p>
+        </div>
 
-          {/* Column 2 — Quick Links */}
-          <div>
+        {/* Links / contact / newsletter — arranged beneath the logo banner */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-12">
+          {/* Quick Links */}
+          <div className="text-center md:text-left">
             <h4 className="text-sm font-bold uppercase tracking-wider mb-4">
               Quick Links
             </h4>
-            <nav>
+            <nav className="flex flex-col items-center md:items-start">
               {[
                 { label: "Home", href: "/" },
                 { label: "Services", href: "/services" },
@@ -35,7 +37,7 @@ export default function Footer() {
                 <a
                   key={label}
                   href={href}
-                  className="block text-white/80 text-sm hover:text-[var(--color-accent)] transition-colors py-1"
+                  className="inline-block text-white/80 text-sm hover:text-[var(--color-accent)] transition-colors py-1"
                 >
                   {label}
                 </a>
@@ -43,14 +45,14 @@ export default function Footer() {
             </nav>
           </div>
 
-          {/* Column 3 — Contact */}
-          <div>
+          {/* Contact */}
+          <div className="text-center md:text-left">
             <h4 className="text-sm font-bold uppercase tracking-wider mb-4">
               Contact Us
             </h4>
-            <div className="flex flex-col gap-3">
+            <div className="flex flex-col gap-3 items-center md:items-start">
               {/* Phone */}
-              <div className="flex items-start gap-2">
+              <div className="flex items-start gap-2 max-w-xs md:max-w-none">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="w-4 h-4 flex-shrink-0 mt-0.5 text-white/80"
@@ -70,7 +72,7 @@ export default function Footer() {
               </div>
 
               {/* Email */}
-              <div className="flex items-start gap-2">
+              <div className="flex items-start gap-2 max-w-xs md:max-w-none">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="w-4 h-4 flex-shrink-0 mt-0.5 text-white/80"
@@ -90,7 +92,7 @@ export default function Footer() {
               </div>
 
               {/* Address */}
-              <div className="flex items-start gap-2">
+              <div className="flex items-start gap-2 max-w-xs md:max-w-none">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="w-4 h-4 flex-shrink-0 mt-0.5 text-white/80"
@@ -119,8 +121,8 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Column 4 — Newsletter */}
-          <div>
+          {/* Newsletter */}
+          <div className="text-center md:text-left">
             <h4 className="text-sm font-bold uppercase tracking-wider mb-4">
               Stay Updated
             </h4>
@@ -131,7 +133,7 @@ export default function Footer() {
               type="email"
               placeholder="Your email address"
               aria-label="Email address for newsletter"
-              className="w-full bg-white/10 border border-white/20 rounded px-3 py-2 text-sm text-white placeholder-white/60 focus:outline-none focus:border-[var(--color-accent)] mt-2"
+              className="w-full bg-white/10 border border-white/20 rounded px-3 py-2 text-sm text-white placeholder-white/60 focus:outline-none focus:border-[var(--color-accent)] mt-3"
             />
             <button className="w-full border border-[var(--color-accent)] text-[var(--color-accent)] text-sm font-semibold py-2 rounded hover:bg-[var(--color-accent)] hover:text-[var(--color-trust)] transition-colors mt-2">
               Subscribe

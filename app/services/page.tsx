@@ -12,8 +12,8 @@ export default function ServicesPage() {
   return (
     <main>
       <ServicesHero />
-      <section className="w-full py-20 bg-white">
-        <div className="max-w-3xl mx-auto px-4 text-center flex flex-col items-center gap-6">
+      <section className="w-full py-12 bg-white">
+        <div className="max-w-3xl mx-auto px-4 text-center flex flex-col items-center gap-5">
           <h2 className="reveal text-3xl font-bold text-[var(--color-trust)]">Quality You Can Trust</h2>
           <p className="reveal text-[var(--color-body-teal)] text-lg leading-relaxed">
             Whether you need a damaged roof repaired or a complete re-roofing service, we can help. Our

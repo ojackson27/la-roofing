@@ -17,7 +17,7 @@ export default function ServiceAreas() {
             />
           </div>
         </div>
-        <div className="reveal flex flex-col gap-6 order-1 md:order-2">
+        <div className="reveal flex flex-col gap-6 order-1 md:order-2" style={{ animationDelay: "0.1s" }}>
           <h2 className="text-3xl font-bold text-[var(--color-trust)]">
             Proudly Serving Exeter &amp; Surrounding Areas
           </h2>

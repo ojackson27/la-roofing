@@ -1,22 +1,23 @@
 export default function ContactSection() {
   return (
-    <section id="contact" className="w-full py-24 bg-white">
-      <div className="max-w-[1280px] mx-auto px-4 md:px-16">
-        <h2 className="reveal text-3xl font-bold text-[var(--color-trust)] mb-12 text-center">
+    <section id="contact" className="w-full py-24 bg-[var(--color-trust)]">
+      <div className="max-w-[960px] mx-auto px-4 md:px-10">
+        <h2 className="reveal text-3xl md:text-4xl font-extrabold text-white mb-12 text-center">
           Get in Touch
         </h2>
 
-        <div className="reveal flex flex-col md:flex-row gap-12 border border-[var(--color-surface-variant)] bg-white p-8 rounded">
+        <div className="reveal flex flex-col md:flex-row gap-10 border-2 border-[var(--color-accent)]/40 bg-[var(--color-primary)] p-8 rounded-lg">
           {/* Left column */}
           <div className="w-full md:w-1/2 flex flex-col gap-8">
-            <h3 className="text-xl font-bold text-[var(--color-trust)]">
+            <h3 className="text-xl font-extrabold text-white">
               Contact Information
             </h3>
 
             {/* Phone */}
             <div className="flex items-start gap-3">
-              <span className="w-5 h-5 text-[var(--color-primary)] flex-shrink-0 mt-0.5">
+              <span className="w-9 h-9 rounded-full bg-[var(--color-accent)]/15 border border-[var(--color-accent)] text-[var(--color-accent)] flex-shrink-0 flex items-center justify-center">
                 <svg
+                  className="w-5 h-5"
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
@@ -31,13 +32,14 @@ export default function ContactSection() {
                   />
                 </svg>
               </span>
-              <span className="text-[var(--color-body-teal)] text-base">07791 052508</span>
+              <span className="text-white text-base mt-1.5">07791 052508</span>
             </div>
 
             {/* Mail */}
             <div className="flex items-start gap-3">
-              <span className="w-5 h-5 text-[var(--color-primary)] flex-shrink-0 mt-0.5">
+              <span className="w-9 h-9 rounded-full bg-[var(--color-accent)]/15 border border-[var(--color-accent)] text-[var(--color-accent)] flex-shrink-0 flex items-center justify-center">
                 <svg
+                  className="w-5 h-5"
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
@@ -52,13 +54,14 @@ export default function ContactSection() {
                   />
                 </svg>
               </span>
-              <span className="text-[var(--color-body-teal)] text-base">info@laroofing.com</span>
+              <span className="text-white text-base mt-1.5">info@laroofing.com</span>
             </div>
 
             {/* Location */}
             <div className="flex items-start gap-3">
-              <span className="w-5 h-5 text-[var(--color-primary)] flex-shrink-0 mt-0.5">
+              <span className="w-9 h-9 rounded-full bg-[var(--color-accent)]/15 border border-[var(--color-accent)] text-[var(--color-accent)] flex-shrink-0 flex items-center justify-center">
                 <svg
+                  className="w-5 h-5"
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
@@ -79,71 +82,71 @@ export default function ContactSection() {
                   />
                 </svg>
               </span>
-              <span className="text-[var(--color-body-teal)] text-base">
+              <span className="text-white text-base mt-1.5">
                 2 Kingfisher Court, Pinhoe Trading Est, Pinhoe, Exeter EX4 8JN
               </span>
             </div>
 
             {/* Map placeholder */}
-            <div className="mt-auto h-48 bg-[var(--color-surface)] border border-[var(--color-surface-variant)] rounded flex items-center justify-center text-sm text-[var(--color-body-teal)]">
+            <div className="mt-auto h-48 bg-[var(--color-trust)] border border-[var(--color-accent)]/40 rounded flex items-center justify-center text-sm text-white/70">
               Map coming soon
             </div>
           </div>
 
           {/* Right column — Contact form */}
-          <div className="w-full md:w-1/2 bg-[var(--color-surface)] p-6 border border-[var(--color-surface-variant)] rounded">
+          <div className="w-full md:w-1/2 bg-[var(--color-trust)] p-6 border border-[var(--color-accent)]/40 rounded-lg">
             <form className="flex flex-col gap-4">
               <div className="flex flex-col gap-1">
-                <label htmlFor="name" className="text-sm font-semibold text-[var(--color-body-teal)]">
+                <label htmlFor="name" className="text-sm font-semibold text-white">
                   Name
                 </label>
                 <input
                   id="name"
                   type="text"
                   placeholder="Your name"
-                  className="w-full bg-white border border-[var(--color-surface-variant)] rounded px-3 py-2.5 text-base focus:outline-none focus:border-[var(--color-primary)] focus:ring-2 focus:ring-[var(--color-primary)]"
+                  className="w-full bg-white border border-[var(--color-surface-variant)] rounded px-3 py-2.5 text-base text-[var(--color-trust)] focus:outline-none focus:border-[var(--color-accent)] focus:ring-2 focus:ring-[var(--color-accent)]"
                 />
               </div>
 
               <div className="flex flex-col gap-1">
-                <label htmlFor="email" className="text-sm font-semibold text-[var(--color-body-teal)]">
+                <label htmlFor="email" className="text-sm font-semibold text-white">
                   Email
                 </label>
                 <input
                   id="email"
                   type="email"
                   placeholder="Your email"
-                  className="w-full bg-white border border-[var(--color-surface-variant)] rounded px-3 py-2.5 text-base focus:outline-none focus:border-[var(--color-primary)] focus:ring-2 focus:ring-[var(--color-primary)]"
+                  className="w-full bg-white border border-[var(--color-surface-variant)] rounded px-3 py-2.5 text-base text-[var(--color-trust)] focus:outline-none focus:border-[var(--color-accent)] focus:ring-2 focus:ring-[var(--color-accent)]"
                 />
               </div>
 
               <div className="flex flex-col gap-1">
-                <label htmlFor="phone" className="text-sm font-semibold text-[var(--color-body-teal)]">
+                <label htmlFor="phone" className="text-sm font-semibold text-white">
                   Phone
                 </label>
                 <input
                   id="phone"
                   type="tel"
                   placeholder="Your phone number"
-                  className="w-full bg-white border border-[var(--color-surface-variant)] rounded px-3 py-2.5 text-base focus:outline-none focus:border-[var(--color-primary)] focus:ring-2 focus:ring-[var(--color-primary)]"
+                  className="w-full bg-white border border-[var(--color-surface-variant)] rounded px-3 py-2.5 text-base text-[var(--color-trust)] focus:outline-none focus:border-[var(--color-accent)] focus:ring-2 focus:ring-[var(--color-accent)]"
                 />
               </div>
 
               <div className="flex flex-col gap-1">
-                <label htmlFor="message" className="text-sm font-semibold text-[var(--color-body-teal)]">
+                <label htmlFor="message" className="text-sm font-semibold text-white">
                   Message
                 </label>
                 <textarea
                   id="message"
                   rows={4}
                   placeholder="Tell us about your project..."
-                  className="w-full bg-white border border-[var(--color-surface-variant)] rounded px-3 py-2.5 text-base focus:outline-none focus:border-[var(--color-primary)] focus:ring-2 focus:ring-[var(--color-primary)]"
+                  className="w-full bg-white border border-[var(--color-surface-variant)] rounded px-3 py-2.5 text-base text-[var(--color-trust)] focus:outline-none focus:border-[var(--color-accent)] focus:ring-2 focus:ring-[var(--color-accent)]"
                 />
               </div>
 
               <button
                 type="submit"
-                className="w-full bg-[var(--color-primary)] text-white font-semibold py-3 rounded hover:bg-[var(--color-accent)] hover:text-[var(--color-trust)] transition-colors mt-2"
+                className="w-full bg-[var(--color-accent)] text-[var(--color-trust)] font-bold py-3 rounded hover:bg-white transition-colors mt-2 min-h-[44px]"
               >
                 Send Message
               </button>
