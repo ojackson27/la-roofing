@@ -14,7 +14,7 @@ Real service categories (from Google Business): Industrial Roofing and Cladding,
 
 **Homepage sections built:**
 1. Navbar (sticky, backdrop-blur, mobile hamburger)
-2. HeroVideo (full-screen FPV drone video, overlaid CTAs)
+2. HeroVideo (full-screen FPV drone video, overlaid CTAs: "Get Estimate", "Our Services", and "Calculate Your Roof Cost" — the latter opens `EstimateModal.tsx`, a client component with a roof-area slider (50–1000 sqm) and material `<select>` (Single Ply Membrane £45/sqm, Slate & Tile £55/sqm, Corrugated Steel £35/sqm) that computes a live `area × rate` estimate, plus a "Book Site Survey" CTA to `#contact`)
 3. MissionServices (mission block + tabbed services: Industrial Roofing & Cladding / Roofer / Slate & Tiling / Single Ply Roofing, with a "View all services" link to `/services`)
 4. WorkReviewsCarousel (horizontal snap-scroll, real photos + reviews)
 5. AboutSection (two-column: photo + copy)
