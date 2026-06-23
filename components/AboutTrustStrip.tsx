@@ -25,7 +25,6 @@ export default function AboutTrustStrip() {
         <div className="grid grid-cols-1 md:grid-cols-5 gap-6">
           {/* Accent panel — wider, dark, anchors the section */}
           <div className="reveal md:col-span-2 md:row-span-2 relative flex flex-col justify-between gap-6 p-8 rounded-lg bg-[var(--color-trust)] text-white overflow-hidden">
-            <div className="absolute -right-8 -bottom-8 w-40 h-40 rounded-full bg-[var(--color-accent)]/10" />
             <div className="relative z-10 w-14 h-14 rounded-full bg-[var(--color-accent)]/15 flex items-center justify-center text-[var(--color-accent)]">
               {localIcon}
             </div>
