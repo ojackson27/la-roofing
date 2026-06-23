@@ -7,11 +7,11 @@ export default function Footer() {
         {/* Logo flanked by quick links and contact info */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-start border-b border-white/15 pb-6 mb-6">
           {/* Quick Links */}
-          <div className="text-center md:text-left order-2 md:order-1">
+          <div className="text-center md:text-right order-2 md:order-1 flex flex-col items-center md:items-end">
             <h4 className="text-sm font-bold uppercase tracking-wider mb-2">
               Quick Links
             </h4>
-            <nav className="flex flex-col items-center md:items-start">
+            <nav className="flex flex-col items-center md:items-end">
               {[
                 { label: "Home", href: "/" },
                 { label: "Services", href: "/services" },
