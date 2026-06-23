@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import EstimateModal from "@/components/EstimateModal";
 
 export default function HeroVideo() {
@@ -21,10 +22,23 @@ export default function HeroVideo() {
 
       <div className="absolute inset-0 bg-black/55" />
 
+      <button
+        type="button"
+        onClick={() => setShowModal(true)}
+        className="absolute top-6 right-4 md:top-8 md:right-8 z-20 inline-flex items-center min-h-[44px] bg-[var(--color-accent)] text-[var(--color-trust)] font-semibold px-5 md:px-8 py-3 rounded hover:opacity-90 transition-opacity"
+      >
+        Calculate Your Roof Cost
+      </button>
+
       <div className="reveal-load relative z-10 text-center text-white px-4 max-w-4xl mx-auto flex flex-col items-center gap-6">
-        <h1 className="text-4xl md:text-6xl font-bold font-[var(--font-montserrat)] leading-tight">
-          LA Roofing. Built to Last.
-        </h1>
+        <Image
+          src="/images/logo-white-full.png"
+          alt="LA Roofing"
+          width={2816}
+          height={1536}
+          priority
+          className="w-64 md:w-96 h-auto"
+        />
 
         <p className="text-lg md:text-xl text-white/90 max-w-2xl">
           Professional roofing services across Exeter and Devon. Quality craftsmanship, guaranteed.
@@ -44,14 +58,6 @@ export default function HeroVideo() {
             Our Services
           </a>
         </div>
-
-        <button
-          type="button"
-          onClick={() => setShowModal(true)}
-          className="inline-flex items-center min-h-[44px] bg-[var(--color-accent)] text-[var(--color-trust)] font-semibold px-8 py-3 rounded hover:opacity-90 transition-opacity"
-        >
-          Calculate Your Roof Cost
-        </button>
       </div>
 
       {showModal && <EstimateModal onClose={() => setShowModal(false)} />}
