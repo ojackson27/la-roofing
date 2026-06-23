@@ -1,4 +1,11 @@
+"use client";
+
+import { useState } from "react";
+import EstimateModal from "@/components/EstimateModal";
+
 export default function HeroVideo() {
+  const [showModal, setShowModal] = useState(false);
+
   return (
     <section className="relative w-full min-h-screen flex items-center justify-center overflow-hidden">
       <video
@@ -37,7 +44,17 @@ export default function HeroVideo() {
             Our Services
           </a>
         </div>
+
+        <button
+          type="button"
+          onClick={() => setShowModal(true)}
+          className="inline-flex items-center min-h-[44px] bg-[var(--color-accent)] text-[var(--color-trust)] font-semibold px-8 py-3 rounded hover:opacity-90 transition-opacity"
+        >
+          Calculate Your Roof Cost
+        </button>
       </div>
+
+      {showModal && <EstimateModal onClose={() => setShowModal(false)} />}
 
       <a
         href="#services"
