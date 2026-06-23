@@ -1,9 +1,6 @@
-import Image from "next/image";
-
 const services = [
   {
     title: "Industrial Roofing and Cladding",
-    image: "/images/services/industrial.jpg",
     description:
       "Large-scale industrial roofing and cladding installation and replacement, engineered to withstand Devon's coastal weather and built for long-term durability.",
     bullets: [
@@ -20,7 +17,6 @@ const services = [
   },
   {
     title: "Roofer",
-    image: "/images/services/roofer.jpg",
     description:
       "Full roofing services for homes and businesses across Exeter, from damaged roof repairs to complete re-roofing, carried out with care and precision.",
     bullets: [
@@ -37,7 +33,6 @@ const services = [
   },
   {
     title: "Slate and Tiling",
-    image: "/images/services/slate.jpg",
     description:
       "Traditional slate and tile roofing that combines classic Devon character with modern weatherproofing techniques for a lasting, premium finish.",
     bullets: [
@@ -54,7 +49,6 @@ const services = [
   },
   {
     title: "Single Ply Roofing",
-    image: "/images/services/singleply.jpg",
     description:
       "Lightweight, flexible, and cost-effective single-ply membrane systems for flat and low-slope roofs, using high-grade synthetic materials.",
     bullets: [
@@ -81,15 +75,7 @@ export default function ServicesGrid() {
               key={service.title}
               className="flex flex-col border border-[var(--color-surface-variant)] bg-white rounded overflow-hidden transition-shadow duration-200 hover:shadow-md"
             >
-              <div className="relative flex items-center gap-4 px-8 py-10 overflow-hidden">
-                <Image
-                  src={service.image}
-                  alt=""
-                  fill
-                  sizes="(min-width: 768px) 50vw, 100vw"
-                  className="object-cover -z-10"
-                />
-                <div className="absolute inset-0 bg-[var(--color-primary)]/80 -z-10" />
+              <div className="flex items-center gap-4 px-8 py-8 bg-[var(--color-primary)]">
                 <div className="w-14 h-14 flex items-center justify-center text-white flex-shrink-0">
                   {service.icon}
                 </div>
